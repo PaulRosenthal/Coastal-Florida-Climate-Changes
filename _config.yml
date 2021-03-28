@@ -3,7 +3,7 @@ gems:
   - jekyll-maps
 plugins:
   - jekyll-maps
-google_maps_javascript_api_key: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+google_maps_javascript_api_key: AIzaSyAiqyN0Lrxqj18qddNEL4hlRM40347a57k
 maps:
   google:
     api_key: ${{ secrets.GOOGLE_MAPS_API_KEY }}
