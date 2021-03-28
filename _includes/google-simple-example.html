@@ -7,10 +7,10 @@ function initMap() {
     center: { lat: 30.333994, lng: -87.141708 },
     zoom: 11,
   });
-  const ctaLayer = new google.maps.KmlLayer({
-    url: "http://downloads.climatecentral.org/assets/kml/sea_level_noaa2017_extreme_p50.kml",
-    map: map,
-  });
+  // NOTE: This uses cross-domain XHR, and may not work on older browsers.
+  map.data.loadGeoJson(
+    "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_9ft/MapServer?f=pjson"
+  );
 }
 </script>
 <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
