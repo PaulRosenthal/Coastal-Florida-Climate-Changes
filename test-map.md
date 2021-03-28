@@ -1,1 +1,1 @@
-{% include google-map.html latitude=-45.8787605 longitude=170.5027976 zoom=5 %}
+{% include google-map.html latitude=-87.141708 longitude=30.333994 zoom=75 %}
