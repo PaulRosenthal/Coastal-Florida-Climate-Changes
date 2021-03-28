@@ -5,7 +5,11 @@ let map;
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 30.333994, lng: -87.141708 },
-    zoom: 8,
+    zoom: 11,
+  });
+  const ctaLayer = new google.maps.KmlLayer({
+    url: "http://downloads.climatecentral.org/assets/kml/sea_level_noaa2017_extreme_p50.kml",
+    map: map,
   });
 }
 </script>
