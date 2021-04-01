@@ -5,7 +5,7 @@ require([
 ], function (Map, MapView, TileLayer) {
 
   var layer = new TileLayer({
-    url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_9ft/MapServer",
+    url: "http://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_9ft/MapServer",
   });
 
   var map = new Map({
