@@ -6,6 +6,8 @@ layout: default
 
 [Link to test Google map](/test-google-map.md)
 
+[Link to test Esri map](/esri-example.html)
+
 There should be whitespace between paragraphs.
 
 There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
