@@ -6,7 +6,7 @@ layout: default
 
 [Link to test Google map](/test-google-map.md)
 
-[Link to test Esri map](/esri-example.html)
+[Link to test Esri map](/test-esri.md)
 
 There should be whitespace between paragraphs.
 
