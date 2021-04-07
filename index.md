@@ -8,6 +8,8 @@ layout: default
 
 [Link to test Esri map](/test-esri.md)
 
+[Link to 2nd test Esri map](/2nd-test-esri.md)
+
 There should be whitespace between paragraphs.
 
 There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
