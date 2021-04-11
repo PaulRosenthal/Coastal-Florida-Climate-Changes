@@ -10,17 +10,17 @@ require([
 
   var rise_of_9_ft = new TileLayer({
     url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_9ft/MapServer",
-    visible: "false"
+    visible: false
   });
   
-  var rise_of_10_ft = new TileLayer({
+  var rise_of_10_ft_layer = new TileLayer({
     url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_10ft/MapServer",
-    visible: "false"
+    visible: false
   });
 
   var map = new Map({
     basemap: "dark-gray",
-    layers: [rise_of_10_ft]
+    layers: [rise_of_9_ft,rise_of_10_ft]
   });
 
   var view = new MapView({
@@ -30,13 +30,13 @@ require([
     zoom: 9
   });
   
-  var rise_of_10_ft_toggle = document.getElementById("rise_of_10_ft");
+  var rise_of_10_ft_toggle = document.getElementById("rise_of_10_ft_checkbox");
 
   rise_of_10_ft_toggle.addEventListener("change", function() {
-    rise_of_10_ft.visible = rise_of_10_ft_toggle.checked;
+    rise_of_10_ft_layer.visible = rise_of_10_ft_toggle.checked;
   });
 });
 </script>
-<span id="layerToggle" class="esri-widget"> <input type="checkbox" id="rise_of_10_ft" unchecked /> 10 Foot Rise From Today </span>
+<span id="layerToggle" class="esri-widget"> <input type="checkbox" id="rise_of_10_ft_checkbox" unchecked /> 10 Foot Rise From Today </span>
 <div id="FLCoastMap" style="padding:0;margin:0;width:800px;height:500px;"></div>
 Updated 04/11/2021 #6.
