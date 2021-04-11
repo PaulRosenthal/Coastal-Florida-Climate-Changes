@@ -14,13 +14,13 @@ require([
   });
   
   var rise_of_10_ft = new TileLayer({
-   url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_10ft/MapServer",
-   visible: "false"
+    url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_10ft/MapServer",
+    visible: "false"
   });
 
   var map = new Map({
     basemap: "gray",
-    layers: [rise_of_9_ft]
+    layers: [rise_of_9_ft,rise_of_10_ft]
   });
 
   var view = new MapView({
@@ -39,4 +39,4 @@ require([
 </script>
 <div id="FLCoastMap" style="padding:0;margin:0;width:800px;height:500px;"></div>
 <span id="layerToggle" class="esri-widget"> <input type="checkbox" id="rise_of_10_ft" unchecked /> 10 Foot Rise From Today </span>
-Updated 04/11/2021 #4.
+Updated 04/11/2021 #5.
