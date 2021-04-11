@@ -10,4 +10,4 @@ This website has been created to help visualize the potential impacts sea level 
 
 Choose a community to get started:
 
-- [Pensacola Beach]
+- [Pensacola Beach](/pensacola-beach.md)
