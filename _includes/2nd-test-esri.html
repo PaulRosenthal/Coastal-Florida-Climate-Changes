@@ -8,13 +8,13 @@ require([
   "esri/layers/TileLayer"
 ], function (Map, MapView, TileLayer) {
 
-  var 9-foot-rise = new TileLayer({
+  var 9ftrise = new TileLayer({
     url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_9ft/MapServer"
   });
 
   var map = new Map({
     basemap: "gray",
-    layers: [9-foot-rise]
+    layers: [9ftrise]
   });
 
   var view = new MapView({
@@ -26,4 +26,4 @@ require([
 });
 </script>
 <div id="FLCoastMap" style="padding:0;margin:0;width:800px;height:500px;"></div>
-Updated 04/11/2021.
+Updated 04/11/2021 #2.
