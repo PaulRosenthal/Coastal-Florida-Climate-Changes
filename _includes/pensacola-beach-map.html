@@ -5,7 +5,8 @@
 require([
   "esri/Map",
   "esri/views/MapView",
-  "esri/layers/TileLayer"
+  "esri/layers/TileLayer",
+  "esri/widgets/LayerList"
 ], function (Map, MapView, TileLayer) {
 
   var rise_of_1_ft_layer = new TileLayer({
@@ -76,6 +77,28 @@ require([
   rise_of_10_ft_toggle.addEventListener("change", function() {
     rise_of_10_ft_layer.visible = rise_of_10_ft_toggle.checked;
   });
+
+//Start of Layer List
+
+  var level_of_rise_selector = new LayerList({
+          map: map,
+          layers: [{
+            layer: rise_of_1_ft_layer,
+              id: "Rise of 1 Foot",
+              subLayers: true
+          },{
+            layer: rise_of_5_ft_layer,
+              id: "Rise of 5 Feet",
+              subLayers: true
+          },{
+            layer: rise_of_10_ft_layer,
+              id: "Rise of 10 Feet",
+              subLayers: true
+          }],
+          showLegend: true,
+          showOpacitySlider: true
+        },"layerList");
+        level_of_rise_selector.startup();
 });
 </script>
 <span id="layerToggle" class="esri-widget"> <input type="datalist" id="rise_of_10_ft_checkbox" /> 10 Foot Rise From Today </span>
