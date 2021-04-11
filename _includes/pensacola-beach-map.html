@@ -10,6 +10,11 @@ require([
   "esri/widgets/LayerList"
 ], function (Map, MapView, GroupLayer, TileLayer, LayerList) {
 
+  var sea_level_today_layer = new TileLayer({
+    url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_0ft/MapServer",
+    visible: true
+  });
+
   var rise_of_1_ft_layer = new TileLayer({
     url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_1ft/MapServer",
     visible: false
@@ -70,7 +75,7 @@ require([
 
   var map = new Map({
     basemap: "dark-gray",
-    layers: [changeInSeaLevelLayer]
+    layers: [sea_level_today_layer,changeInSeaLevelLayer]
   });
 
   var view = new MapView({
@@ -160,15 +165,15 @@ require([
         // if the increase-opacity action is triggered, then
         // increase the opacity of the GroupLayer by 0.25
 
-        if (demographicGroupLayer.opacity < 1) {
-          demographicGroupLayer.opacity += 0.25;
+        if (changeInSeaLevelLayer.opacity < 1) {
+          changeInSeaLevelLayer.opacity += 0.25;
         }
       } else if (id === "decrease-opacity") {
         // if the decrease-opacity action is triggered, then
         // decrease the opacity of the GroupLayer by 0.25
 
-        if (demographicGroupLayer.opacity > 0) {
-          demographicGroupLayer.opacity -= 0.25;
+        if (changeInSeaLevelLayer.opacity > 0) {
+          changeInSeaLevelLayer.opacity -= 0.25;
         }
       }
     });
