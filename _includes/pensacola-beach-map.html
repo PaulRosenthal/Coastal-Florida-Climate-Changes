@@ -8,6 +8,47 @@ require([
   "esri/layers/TileLayer"
 ], function (Map, MapView, TileLayer) {
 
+  var rise_of_1_ft = new TileLayer({
+    url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_1ft/MapServer",
+    visible: false
+  });
+
+  var rise_of_2_ft = new TileLayer({
+    url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_2ft/MapServer",
+    visible: false
+  });
+
+
+  var rise_of_3_ft = new TileLayer({
+    url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_3ft/MapServer",
+    visible: false
+  });
+
+  var rise_of_4_ft = new TileLayer({
+    url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_4ft/MapServer",
+    visible: false
+  });
+
+  var rise_of_5_ft = new TileLayer({
+    url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_5ft/MapServer",
+    visible: false
+  });
+
+  var rise_of_6_ft = new TileLayer({
+    url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_6ft/MapServer",
+    visible: false
+  });
+
+  var rise_of_7_ft = new TileLayer({
+    url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_7ft/MapServer",
+    visible: false
+  });
+  
+  var rise_of_8_ft = new TileLayer({
+    url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_8ft/MapServer",
+    visible: false
+  });
+
   var rise_of_9_ft = new TileLayer({
     url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_9ft/MapServer",
     visible: false
@@ -27,7 +68,7 @@ require([
     container: "FLCoastMap",
     map: map,
     center: [ -87.141047, 30.333715],
-    zoom: 11
+    zoom: 13
   });
   
   var rise_of_10_ft_toggle = document.getElementById("rise_of_10_ft_checkbox");
@@ -39,4 +80,3 @@ require([
 </script>
 <span id="layerToggle" class="esri-widget"> <input type="checkbox" id="rise_of_10_ft_checkbox" unchecked /> 10 Foot Rise From Today </span>
 <div id="FLCoastMap" style="padding:0;margin:0;width:800px;height:500px;"></div>
-Updated 04/11/2021 #6.
