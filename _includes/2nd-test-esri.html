@@ -11,6 +11,11 @@ require([
   var rise_of_9_ft = new TileLayer({
     url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_9ft/MapServer"
   });
+  
+    var rise_of_10_ft = new TileLayer({
+    url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_10ft/MapServer",
+    visible: "false"
+  });
 
   var map = new Map({
     basemap: "gray",
