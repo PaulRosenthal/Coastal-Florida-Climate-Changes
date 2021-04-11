@@ -80,7 +80,7 @@ require([
 
 //Start of Layer List
 
-  var level_of_rise_selector = new LayerList({
+  const level_of_rise_selector = new LayerList({
           map: map,
           layers: [{
             layer: rise_of_1_ft_layer,
@@ -98,7 +98,7 @@ require([
           showLegend: true,
           showOpacitySlider: true
         },"layerList");
-        level_of_rise_selector.startup();
+        view.ui.add(layerList, "top-right");
 });
 </script>
 <span id="layerToggle" class="esri-widget"> <input type="datalist" id="rise_of_10_ft_checkbox" /> 10 Foot Rise From Today </span>
