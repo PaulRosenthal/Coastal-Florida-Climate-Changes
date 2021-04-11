@@ -78,13 +78,14 @@ require([
     rise_of_10_ft_layer.visible = rise_of_10_ft_toggle.checked;
   });
 
-  var layerList = new LayerList({
-    view: view
-  });
-  // Adds widget below other elements in the top left corner of the view
-  view.ui.add(layerList, {
-    position: "top-left"
-  });
+  view.when(function() {
+     var layerList = new LayerList({
+       view: view
+      });
+
+      // Add widget to the top right corner of the view
+      view.ui.add(layerList, "top-right");
+    });
 
 /* Start of Layer List
 
