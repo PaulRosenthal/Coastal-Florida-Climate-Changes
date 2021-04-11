@@ -5,13 +5,14 @@
 require([
   "esri/Map",
   "esri/views/MapView",
+  "esri/layers/GroupLayer",
   "esri/layers/TileLayer",
   "esri/widgets/LayerList"
-], function (Map, MapView, TileLayer, LayerList) {
+], function (Map, MapView, GroupLayer, TileLayer, LayerList) {
 
   var rise_of_1_ft_layer = new TileLayer({
     url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_1ft/MapServer",
-    visible: true
+    visible: false
   });
 
   var rise_of_2_ft_layer = new TileLayer({
@@ -60,9 +61,16 @@ require([
     visible: false
   });
 
+  var changeInSeaLevelLayer = new GroupLayer({
+    title: "Change in Sea Level",
+    visible: true,
+    visibilityMode: "exclusive",
+    layers: [rise_of_1_ft_layer,rise_of_2_ft_layer,rise_of_3_ft_layer,rise_of_4_ft_layer,rise_of_5_ft_layer,rise_of_6_ft_layer,rise_of_7_ft_layer,rise_of_8_ft_layer,rise_of_9_ft_layer,rise_of_10_ft_layer],
+  });
+
   var map = new Map({
     basemap: "dark-gray",
-    layers: [rise_of_1_ft_layer,rise_of_2_ft_layer,rise_of_3_ft_layer,rise_of_4_ft_layer,rise_of_5_ft_layer,rise_of_6_ft_layer,rise_of_7_ft_layer,rise_of_8_ft_layer,rise_of_9_ft_layer,rise_of_10_ft_layer]
+    layers: [changeInSeaLevelLayer]
   });
 
   var view = new MapView({
@@ -89,28 +97,6 @@ require([
       view.ui.add(layerList, "top-right");
     }); */
 
-//Start of Layer List
-
-  var level_of_rise_selector = new LayerList({
-          map: map,
-          layers: [{
-            layer: rise_of_1_ft_layer,
-              id: "rise_of_1_ft_layer",
-              subLayers: true
-          },{
-            layer: rise_of_5_ft_layer,
-              id: "Rise of 5 Feet",
-              subLayers: true
-          },{
-            layer: rise_of_10_ft_layer,
-              id: "Rise of 10 Feet",
-              subLayers: true
-          }],
-          showLegend: true,
-          showOpacitySlider: true
-        },"layerList");
-
-  view.ui.add(level_of_rise_selector, "top-right");
 });
 </script>
 <span id="layerToggle" class="esri-widget"> <input type="datalist" id="rise_of_10_ft_checkbox" /> 10 Foot Rise From Today </span>
