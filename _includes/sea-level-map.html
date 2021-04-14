@@ -92,7 +92,7 @@ require([
   var view = new MapView({
     container: "FLCoastMap",
     map: map,
-    center: [ -87.141047, 30.333715],
+    center: [{{ include.longitude }}, {{ include.latitude }}],
     zoom: 16
   });
   
