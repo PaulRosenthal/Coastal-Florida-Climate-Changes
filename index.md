@@ -10,5 +10,6 @@ This website has been created to help visualize the potential impacts sea level 
 
 Choose a community to get started:
 
+- [Destin](/communities/destin.md)
 - [Navarre Beach](/communities/navarre-beach.md)
 - [Pensacola Beach](/communities/pensacola-beach.md)
