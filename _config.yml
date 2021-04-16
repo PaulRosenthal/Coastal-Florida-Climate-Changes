@@ -4,5 +4,3 @@ gems:
   - jekyll-maps
 plugins:
   - jekyll-maps
-github:
-  is_project_page: false
