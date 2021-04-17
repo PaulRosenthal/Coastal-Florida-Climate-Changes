@@ -14,6 +14,7 @@ This website has been created to help visualize the potential impacts sea level 
 Choose a community to visualize various levels of sea level change and learn more about the projections there:
 
 - [Destin](/communities/destin.md)
+- [Fort Walton Beach](/communities/fort-walton-beach.md)
 - [Navarre Beach](/communities/navarre-beach.md)
 - [Panama City Beach](/communities/panama-city-beach.md)
 - [Pensacola Beach](/communities/pensacola-beach.md)
