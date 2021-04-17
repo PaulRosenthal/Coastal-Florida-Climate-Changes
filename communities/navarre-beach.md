@@ -6,7 +6,7 @@ description: How Sea Levels Impact Navarre Beach
 
 ## Detailed Forecasts and Local Information
 
- - [View a detailed sea level rise and coastal flood risk report](https://riskfinder.climatecentral.org/api/reports/place/navarre-beach.fl.us/fast-look?lang=en) for Navarre Beach from Climate Central
+ - [View a detailed sea level rise and coastal flood risk report](https://github.com/PaulRosenthal/NorthwestFLSeaLevelChanges/raw/main/downloads/navarre-beach/local-report-from-climate-central.pdf) for Navarre Beach from Climate Central
  
 ## Visualize Sea Level Change in Navarre Beach
 
