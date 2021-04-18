@@ -96,6 +96,28 @@ require([
     zoom: 16
   });
   
+    // Load
+
+    isResponsiveSize = view.widthBreakpoint === "xsmall";
+    updateView(isResponsiveSize);
+
+    // Breakpoints
+
+    view.watch("widthBreakpoint", function(breakpoint) {
+      switch (breakpoint) {
+        case "xsmall":
+          updateView(true);
+          break;
+        case "small":
+        case "medium":
+        case "large":
+        case "xlarge":
+          updateView(false);
+          break;
+        default:
+      }
+    });  
+  
   // Creates actions in the LayerList.
 
   function defineActions(event) {
