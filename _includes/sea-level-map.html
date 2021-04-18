@@ -94,32 +94,7 @@ require([
     map: map,
     center: [{{ include.longitude }}, {{ include.latitude }}],
     zoom: 16
-    autoResize: true
   });
-  
-    // Load
-
-    isResponsiveSize = view.widthBreakpoint === "xsmall";
-    updateView(isResponsiveSize);
-
-    // Breakpoints
-
-    view.watch("widthBreakpoint", function(breakpoint) {
-      switch (breakpoint) {
-        case "xsmall":
-          updateView(true);
-        case "small":
-        case "medium":
-        case "large":
-        case "xlarge":
-          updateView(false);
-        default:
-      }
-    });  
-  
-      function updateView(isMobile) {
-        view.width: 200px;
-    }
   
   // Creates actions in the LayerList.
 
