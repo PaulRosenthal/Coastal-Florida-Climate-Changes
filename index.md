@@ -23,3 +23,7 @@ Choose a community to visualize various levels of sea level change and learn mor
 
 - [NOAA](https://noaa.gov/)
 - [Climate Central](https://climatecentral.org/)
+
+## Suggestions and Feedback
+
+Thank you for visiting my site! I hope you have found it helpful. Should you have any suggestions or feedback, I would like to hear from you! Please contact me [here](/contact-me.md).
