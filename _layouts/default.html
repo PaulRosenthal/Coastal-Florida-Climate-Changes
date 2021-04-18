@@ -26,10 +26,12 @@
     <header class="page-header" role="banner">
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-      {% if site.show_downloads %}
-        <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
-        <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
-      {% endif %}
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/communities/destin.html">Destin</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main id="content" class="main-content" role="main">
@@ -37,7 +39,7 @@
 
       <footer class="site-footer">
         {% if site.github.is_project_page %}
-          <span class="site-footer-owner">The source code for the Florida Coastal Changes website is available <a href="{{ site.github.repository_url }}">in Github</a> and is maintained by <a href="{{ site.github.owner_url }}">Paul Rosenthal</a>. Please contact me <a href="https://coastalflchanges.ga/contact-me.html">here</a>.</span>
+          <span class="site-footer-owner">The source code for the Florida Coastal Changes website is available <a href="{{ site.github.repository_url }}">in GitHub</a> and is maintained by <a href="{{ site.github.owner_url }}">Paul Rosenthal</a>. Please contact me <a href="https://coastalflchanges.ga/contact-me.html">here</a>.</span>
         {% endif %}
       </footer>
     </main>
