@@ -4,7 +4,7 @@ Welcome to the NorthwestFLSeaLevelChanges repository; it has been created to hel
 
 ## Production and Testing Environments
 
-There are two environments associated with this project. The first is the production website that is accessible via [https://coastalflchanges.ga](https://coastaflchanges.ga). The second is an environment used for development and testing. It is accessible via [test.coastalflchanges.ga](https://test.coastalflchanges.ga).
+There are two environments associated with this project. The first is the production website that is accessible via [https://coastalflchanges.ga](https://coastalflchanges.ga). The second is an environment used for development and testing. It is accessible via [test.coastalflchanges.ga](https://test.coastalflchanges.ga).
 
 The badge below shows the current status of the most recent build for the test environment:
 
