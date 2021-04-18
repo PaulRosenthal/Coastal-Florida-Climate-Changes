@@ -19,6 +19,8 @@ Choose a community to visualize various levels of sea level change and learn mor
 - [Panama City Beach](/communities/panama-city-beach.md)
 - [Pensacola Beach](/communities/pensacola-beach.md)
 
+Don't see your area of interest? Search any area on the coast [here](/communities/custom-location.md).
+
 ## References and Resources
 
 - [NOAA](https://noaa.gov/)

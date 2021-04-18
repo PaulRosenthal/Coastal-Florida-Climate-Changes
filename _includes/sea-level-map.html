@@ -95,6 +95,13 @@ require([
     center: [{{ include.longitude }}, {{ include.latitude }}],
     zoom: 16
   });
+
+  view.ui.add(
+    new Search({
+      view: view
+    }),
+    "top-right"
+  );
   
   // Creates actions in the LayerList.
 
