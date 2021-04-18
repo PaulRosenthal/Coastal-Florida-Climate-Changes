@@ -7,8 +7,9 @@ require([
   "esri/views/MapView",
   "esri/layers/GroupLayer",
   "esri/layers/TileLayer",
-  "esri/widgets/LayerList"
-], function (Map, MapView, GroupLayer, TileLayer, LayerList) {
+  "esri/widgets/LayerList",
+  "esri/widgets/Search"
+], function (Map, MapView, GroupLayer, TileLayer, LayerList, Search) {
 
   var sea_level_today_layer = new TileLayer({
     url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_0ft/MapServer",
