@@ -14,4 +14,4 @@ description: How Sea Levels Impact Destin
 
 ## Additional Resources
 
-{% include additional-resources.md %}
+{% include_relative additional-resources.md %}
