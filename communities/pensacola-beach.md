@@ -11,3 +11,7 @@ description: How Sea Levels Impact Pensacola Beach
 ## Visualize Sea Level Change in Pensacola Beach
 
 {% include sea-level-map.html longitude="-87.141047" latitude="30.333715" %}
+
+## Additional Resources
+
+{% include_relative additional-resources.md %}

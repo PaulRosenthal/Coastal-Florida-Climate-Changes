@@ -23,8 +23,7 @@ Don't see your area of interest? Search any area on the coast [here](/communitie
 
 ## References and Resources
 
-- [NOAA](https://noaa.gov/)
-- [Climate Central](https://climatecentral.org/)
+Additional references and resources to learn more about sea levels and how they impact northwest Florida can be found [here](/communities/additional-resources)
 
 ## Suggestions and Feedback
 
