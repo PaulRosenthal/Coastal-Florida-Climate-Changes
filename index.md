@@ -13,17 +13,18 @@ This website has been created to help visualize the potential impacts sea level 
 
 Choose a community to visualize various levels of sea level change and learn more about the projections there:
 
-- [Destin](/communities/destin.md)
-- [Fort Walton Beach](/communities/fort-walton-beach.md)
-- [Navarre Beach](/communities/navarre-beach.md)
-- [Panama City Beach](/communities/panama-city-beach.md)
-- [Pensacola Beach](/communities/pensacola-beach.md)
+- [Destin](/communities/destin)
+- [Fort Walton Beach](/communities/fort-walton-beach)
+- [Navarre Beach](/communities/navarre-beach)
+- [Panama City Beach](/communities/panama-city-beach)
+- [Pensacola Beach](/communities/pensacola-beach)
+
+Don't see your area of interest? Search any area on the coast [here](/communities/custom-location).
 
 ## References and Resources
 
-- [NOAA](https://noaa.gov/)
-- [Climate Central](https://climatecentral.org/)
+Additional references and resources to learn more about sea levels and how they impact northwest Florida can be found [here](/additional-resources).
 
 ## Suggestions and Feedback
 
-Thank you for visiting my site! I hope you have found it helpful. Should you have any suggestions or feedback, I would like to hear from you! Please contact me [here](/contact-me.md).
+Thank you for visiting my site! I hope you have found it helpful. Should you have any suggestions or feedback, I would like to hear from you! Please contact me [here](/contact-me).
