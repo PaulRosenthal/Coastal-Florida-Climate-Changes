@@ -1,10 +1,10 @@
-# Northwest Florida Coastal Changes
+# Sea Florida Change - Northwest Florida Coastal Changes
 
-Welcome to the NorthwestFLSeaLevelChanges repository; it has been created to help visualize anticipated sea level variance over time.
+Welcome to the Sea Florida Change repository; it has been created to help visualize anticipated sea level variance over time.
 
 ## Production and Testing Environments
 
-There are two environments associated with this project. The first is the production website that is accessible via [https://coastalflchanges.ga](https://coastaflchanges.ga). The second is an environment used for development and testing. It is accessible via [test.coastalflchanges.ga](https://test.coastalflchanges.ga).
+There are two environments associated with this project. The first is the production website that is accessible via [https://SeaFLChange.org](https://SeaFLChange.org). The second is an environment used for development and testing. It is accessible via [test.SeaFLChange.org](https://test.SeaFLChange.org).
 
 The badge below shows the current status of the most recent build for the test environment:
 
