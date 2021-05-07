@@ -1,4 +1,4 @@
-Name: Automated Deployment Test
+name: Automated Deployment Test
 
 on: [push]
 
