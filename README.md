@@ -6,8 +6,9 @@ Welcome to the Sea Florida Change repository; it has been created to help visual
 
 There are two environments associated with this project. The first is the production website that is accessible via [https://SeaFLChange.org](https://SeaFLChange.org). The second is an environment used for development and testing. It is accessible via [test.SeaFLChange.org](https://test.SeaFLChange.org).
 
-The badge below shows the current status of the most recent build for the test environment:
+The badges below show the status of the most recent automated deployment test workflow (used to ensure source code changes do not induce website deployment failures) and test environment build:
 
+[![Automated Deployment Test](https://github.com/PaulRosenthal/Coastal-Florida-Climate-Changes/actions/workflows/deployment-test.yml/badge.svg)](https://github.com/PaulRosenthal/Coastal-Florida-Climate-Changes/actions/workflows/deployment-test.yml)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/86f3f288-26f7-492b-96a2-fe86728b72c0/deploy-status)](https://app.netlify.com/sites/coastal-florida-climate-changes/deploys)
 
 ## Feedback or Contributions
