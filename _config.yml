@@ -1,3 +1,6 @@
 title: Sea Level Change in Northwest Florida
 theme: jekyll-theme-cayman
 google_analytics: G-5XSYFHL176
+url: "https://seaflchange.org"
+plugins:
+  - jekyll-sitemap

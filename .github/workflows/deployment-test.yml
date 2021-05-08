@@ -1,3 +1,5 @@
+name: Automated Deployment Test
+
 on: [push]
 
 jobs:
