@@ -13,14 +13,10 @@
     {% endif %}
     <meta charset="UTF-8">
 
+    <!-- The lines below customize the title displayed by a browser in cases where the name "Sea Florida Change" appears in the page title. They ensure "Sea Florida Change" is not included twice. -->
     {%- seo title=false -%}
-    <title>
-        {% if page.display-title %}
-          {{ page.display-title }}
-        {% else %}
-          {{ page.title }} | {{ site.title }}
-        {% endif %}
-    </title>
+    <title> {% if page.display-title %} {{ page.display-title }} {% else %} {{ page.title }} | {{ site.title }} {% endif %} </title>
+    
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1">
