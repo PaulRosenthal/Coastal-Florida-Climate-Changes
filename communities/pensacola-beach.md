@@ -22,4 +22,4 @@ While the map above is useful helping visualize what sea level rise looks like i
 
 Interested in seeing how our climate changes over time? Check out the Climate Time Machine from NASA below:
 
-<iframe src="https://climate.nasa.gov/interactives/climate_time_machine" padding="0" margin="0" width="100%" height="400px" style="-webkit-transform:scale(0.5);-moz-transform-scale(0.5);"></iframe>
+<img src="https://climate.nasa.gov/system/resources/detail_files/25_ctm-768-549.jpg" id="auto-fit-image"> 
