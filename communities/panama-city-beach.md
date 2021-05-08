@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Panama City Beach
+title: "Sea Florida Change: Panama City Beach" # This title is surrounded by quotation marks as it contains a colon.
 tagline: How Sea Levels Impact Panama City Beach
 description: See how changing sea levels impact Panama City Beach and what its future holds.
 ---

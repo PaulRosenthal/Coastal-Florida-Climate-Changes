@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Fort Walton Beach
+title: "Sea Florida Change: Fort Walton Beach" # This title is surrounded by quotation marks as it contains a colon.
 tagline: How Sea Levels Impact Fort Walton Beach
 description: See how changing sea levels impact Fort Walton Beach and what its future holds.
 ---

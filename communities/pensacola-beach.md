@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Pensacola Beach
+title: "Sea Florida Change: Pensacola Beach" # This title is surrounded by quotation marks as it contains a colon.
 tagline: How Sea Levels Impact Pensacola Beach
 description: See how changing sea levels impact Pensacola Beach and what its future holds.
 ---
