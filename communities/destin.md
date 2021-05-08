@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Destin
-description: How Sea Levels Impact Destin
+tagline: How Sea Levels Impact Destin
+description: See how changing sea levels impact Destin and what its future holds.
 ---
 
 ## Detailed Forecasts and Local Information

@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Panama City Beach
-description: How Sea Levels Impact Panama City Beach
+tagline: How Sea Levels Impact Panama City Beach
+description: See how changing sea levels impact Panama City Beach and what its future holds.
 ---
 
 ## Detailed Forecasts and Local Information

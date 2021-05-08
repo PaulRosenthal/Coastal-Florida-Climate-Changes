@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Pensacola Beach
-description: How Sea Levels Impact Pensacola Beach
+tagline: How Sea Levels Impact Pensacola Beach
+description: See how changing sea levels impact Pensacola Beach and what its future holds.
 ---
 
 ## Detailed Forecasts and Local Information
