@@ -1,7 +1,9 @@
 ---
 layout: default
-title: Destin
-description: How Sea Levels Impact Destin
+title: "Sea Florida Change: Destin" # This title is surrounded by quotation marks as it contains a colon.
+display-title: "Sea Florida Change: Destin"
+tagline: How Sea Levels Impact Destin
+description: See how changing sea levels impact Destin and what its future holds.
 ---
 
 ## Detailed Forecasts and Local Information

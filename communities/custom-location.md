@@ -1,7 +1,9 @@
 ---
 layout: default
-title: Area Search
-description: Learn How Sea Levels Impact Your Area
+title: "Sea Florida Change: Area Search" # This title is surrounded by quotation marks as it contains a colon.
+display-title: "Sea Florida Change: Area Search"
+tagline: Learn How Sea Levels Impact Your Area
+description: See how changing sea levels impact any coastal area and what its future holds.
 ---
 
 ## Search Your Area and Visualize Sea Level Change

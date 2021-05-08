@@ -1,7 +1,9 @@
 ---
 layout: default
-title: Navarre Beach
-description: How Sea Levels Impact Navarre Beach
+title: "Sea Florida Change: Navarre Beach" # This title is surrounded by quotation marks as it contains a colon.
+display-title: "Sea Florida Change: Navarre Beach"
+tagline: How Sea Levels Impact Navarre Beach
+description: See how changing sea levels impact Navarre Beach and what its future holds.
 ---
 
 ## Detailed Forecasts and Local Information
