@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Sea Florida Change
-description: Sea Levels in Northwest Florida
+tagline: Sea Levels in Northwest Florida
+description: Visualize sea level changes and see what the future holds in northwest Florida's coastal areas.
 ---
 
 
