@@ -5,7 +5,7 @@ on: [push]
 jobs:
   Jekyll-Deploy-Test-Action:
     runs-on: ubuntu-latest
-    name: This job serves as the continuous integration pipepline for the Coastal Florida Climate Changes website.
+    name: Jekyll Deployment Test
     steps:
     - name: Checkout
       uses: actions/checkout@v2
