@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Northwest Florida Sea Level Changes
+title: Sea Florida Change
+description: Sea Levels in Northwest Florida
 ---
 
 
