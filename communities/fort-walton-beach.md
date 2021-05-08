@@ -12,8 +12,4 @@ description: How Sea Levels Impact Fort Walton Beach
 
 {% include sea-level-map.html longitude="-86.617813" latitude="30.404446" %}
 
-## Additional Resources
-
-While the map above is useful helping visualize what sea level rise looks like in your area of interest, there are many resources available to attain a detailed understanding in addition to the resources at the top of this page. Any of the items in the list below are a great place to get started. If you have additional resources, [please send them to me](/contact-me).
-
-{% include list-of-resources.md %}
+{% include resources.md map_location_statement="While the map on this page is useful for helping visualize what sea level rise looks like in your area of interest, there are many other great resources available." %}
