@@ -107,13 +107,13 @@
   padding: 0;
   margin: 0;
   width: auto;
-  height: 400px;
+  height: 600px;
 
   // Modify height for mobile devices in portrait mode
   @media screen 
   and (orientation: portrait)
   and (max-device-width: 480px) {
-    height: 600px;
+    height: 400px;
   }
 
   // Modify height for mobile devices in landscape mode
