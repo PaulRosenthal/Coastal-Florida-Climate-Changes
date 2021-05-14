@@ -110,12 +110,16 @@
   height: 400px;
 
   // Modify height for mobile devices in portrait mode
-  @media screen and (orientation: portrait) {
+  @media screen 
+  and (orientation: portrait)
+  and (max-device-width: 480px) {
     height: 600px;
   }
 
   // Modify height for mobile devices in landscape mode
-  @media screen and (orientation: landscape) {
+  @media screen 
+  and (orientation: landscape)
+  and (max-device-width: 480px) {
     height: 325px;
   }
 }
@@ -124,7 +128,9 @@
   // Items with this style should only display on mobile devices in portrait mode
   display: none;
 
-  @media screen and (orientation: portrait) {
+  @media screen 
+  and (orientation: portrait)
+  and (max-device-width: 480px) {
       display: block;
       font-style: italic;
   }
