@@ -119,7 +119,7 @@
   // Modify height for mobile devices in landscape mode
   @media screen 
   and (orientation: landscape)
-  and (max-device-width: 480px) {
+  and (max-device-width: 767px) {
     height: 325px;
   }
 }
