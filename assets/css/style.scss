@@ -102,6 +102,15 @@
   }
 }
 
+.portrait-and-mobile {
+  display: none;
+
+  @media screen and (orientation: portrait) {
+      display: block;
+      font-style: italic;
+  }
+}
+
 .climate-time-machine-image {
   height: auto;
   width: 50%;
