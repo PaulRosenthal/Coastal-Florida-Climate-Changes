@@ -102,6 +102,40 @@
   }
 }
 
+.coastal-map {
+  display: block;
+  padding: 0;
+  margin: 0;
+  width: auto;
+  height: 600px;
+
+  // Modify height for mobile devices in portrait mode
+  @media screen 
+  and (orientation: portrait)
+  and (max-device-width: 480px) {
+    height: 400px;
+  }
+
+  // Modify height for mobile devices in landscape mode
+  @media screen 
+  and (orientation: landscape)
+  and (max-device-width: 850px) {
+    height: 325px;
+  }
+}
+
+.portrait-and-mobile {
+  // Items with this style should only display on mobile devices in portrait mode
+  display: none;
+
+  @media screen 
+  and (orientation: portrait)
+  and (max-device-width: 480px) {
+      display: block;
+      font-style: italic;
+  }
+}
+
 .climate-time-machine-image {
   height: auto;
   width: 50%;
