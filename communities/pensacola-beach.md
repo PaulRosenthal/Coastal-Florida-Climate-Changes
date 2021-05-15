@@ -9,6 +9,7 @@ description: See how changing sea levels impact Pensacola Beach and what its fut
 ## Detailed Forecasts and Local Information
 
  - [View a detailed sea level rise and coastal flood risk report](/downloads/pensacola-beach/local-report-from-climate-central.pdf) for Pensacola Beach from Climate Central
+  - Escambia County has a [79% chance of being impacted by a named storm (including tropical storms) and a 32% chance of being impacted by a hurricane in 2021](https://tropical.colostate.edu/resources.html)
 
 ## Visualize Sea Level Change in Pensacola Beach
 
