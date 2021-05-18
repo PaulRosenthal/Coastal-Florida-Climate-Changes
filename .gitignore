@@ -1,0 +1,8 @@
+# Jekyll Build Files
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# MacOS File That Stores Folder Information
+*.DS_Store
