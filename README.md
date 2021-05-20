@@ -1,4 +1,4 @@
-<img src="/img/favicon.png" alt="Sea Florida Change Logo">
+<img src="/img/logo.png" alt="Sea Florida Change Logo">
 
 # Sea Florida Change - Northwest Florida Coastal Changes
 
