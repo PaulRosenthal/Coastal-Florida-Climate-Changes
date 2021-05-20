@@ -1,3 +1,5 @@
+<img src="/img/logo_transparent.png" alt="Sea Florida Change Logo" style="height:35%;width:35%;margin-left:auto;margin-right:auto;display:block">
+
 # Sea Florida Change - Northwest Florida Coastal Changes
 
 Welcome to the Sea Florida Change repository; it has been created to help visualize anticipated sea level variance over time.
