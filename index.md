@@ -6,7 +6,7 @@ tagline: Visualize Sea Level Changes and Threats to Northwest Florida's Coastal 
 description: Visualize sea level changes and see what the future holds in northwest Florida's coastal areas.
 ---
 
-
+<img src="/img/logo-transparent.png" alt="Sea Florida Change Logo" style="height:200px;width:200px;margin-left:auto;margin-right:auto;display:block">
 
 ## Welcome
 
