@@ -30,6 +30,12 @@ Don't see your area of interest? Search any area on the coast [here](/communitie
 
 Additional references and resources to learn more about sea levels and how they impact northwest Florida can be found [here](/additional-resources).
 
+## What is Happening Now?
+
+Curious about whether there are currently any active storms in the Gulf of Mexico or Atlantic? See the graphic below from the National Hurricane Center, and click it for additional information.
+
+<a href="https://www.nhc.noaa.gov/text/refresh/MIATWDAT+shtml/221721_MIATWDAT.shtml?"> <img src="https://www.nhc.noaa.gov/xgtwo/two_atl_5d0.png" alt="National Hurricane Center Tropical Weather Outlook" class="preview-image"/></a>
+
 ## Suggestions and Feedback
 
 Thank you for visiting my site! I hope you have found it helpful. Should you have any suggestions or feedback, I would like to hear from you! Please contact me [here](/contact-me).
