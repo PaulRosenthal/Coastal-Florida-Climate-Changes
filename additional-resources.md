@@ -18,7 +18,8 @@ description: Explore additional resources to help visualize sea level changes an
 
 ## What is Happening Now?
 
-Curious about whether there are currently any active storms in the Gulf of Mexico or Atlantic? See the graphic below from the National Hurricane Center, and click it for additional information.<br>
+Curious about whether there are currently any active storms in the Gulf of Mexico or Atlantic? See the graphic below from the National Hurricane Center, and click it for additional information.
+
 
 <a href="https://www.nhc.noaa.gov/text/refresh/MIATWDAT+shtml/221721_MIATWDAT.shtml?"> <img src="https://www.nhc.noaa.gov/xgtwo/two_atl_5d0.png" alt="National Hurricane Center Tropical Weather Outlook" class="preview-image"/></a>
 
