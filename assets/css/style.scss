@@ -3,7 +3,7 @@
 
 @import "{{ site.theme }}";
 
-.btn {
+.button, .dropdown-section-head-button {
   display: inline-block;
   margin-bottom: 1rem;
   color: rgba(255, 255, 255, 0.7);
@@ -14,17 +14,20 @@
   border-radius: 0.3rem;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
 
-  &:hover {
+  .button:hover, .dropdown-section-head-button:hover {
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
     background-color: rgba(255, 255, 255, 0.2);
     border-color: rgba(255, 255, 255, 0.3);
   }
 
-  + .btn {
+  + .button {
     margin-left: 1rem;
   }
 
+  + .dropdown-section-head-button {
+    margin-left: 1rem;
+  }
   @include large {
     padding: 0.75rem 1rem;
   }
@@ -39,11 +42,36 @@
     padding: 0rem;
     font-size: 0.9rem;
 
-    + .btn {
+    + .button {
+      margin-top: 1rem;
+      margin-left: 0;
+    }
+
+    + .dropdown-section-head-button {
       margin-top: 1rem;
       margin-left: 0;
     }
   }
+}
+
+.navigation-bar {
+  overflow: hidden;
+  display: inline;
+}
+
+.dropdown-section {
+  display: inline-block;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.dropdown-section-content {
+  display: none;
+}
+
+.dropdown-section:hover .dropdown-section-content {
+  display: block;
+  position: absolute;
 }
 
 .page-header {
