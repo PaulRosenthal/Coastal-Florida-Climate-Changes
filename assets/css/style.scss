@@ -5,7 +5,6 @@
 
 .button, .dropdown-section-head-button {
   display: inline-block;
-  margin-bottom: 1rem;
   color: rgba(255, 255, 255, 0.7);
   background-color: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.2);
@@ -38,19 +37,13 @@
   }
 
   @include small {
-    width: 45%;
-    padding: 0rem;
+    width: auto;
+    padding: 0.5rem;
     font-size: 0.9rem;
-
-    + .button {
-      margin-top: 1rem;
-      margin-left: 0;
-    }
-
-    + .dropdown-section-head-button {
-      margin-top: 1rem;
-      margin-left: 0;
-    }
+    margin-right: 0.50rem;
+    margin-left: 0.50rem;
+    margin-top: 0.50rem;
+    margin-bottom:  0.50rem;
   }
 }
 
@@ -61,8 +54,6 @@
 
 .dropdown-section {
   display: inline-block;
-  margin-left: 1rem;
-  margin-right: 1rem;
 }
 
 .dropdown-section-content {
