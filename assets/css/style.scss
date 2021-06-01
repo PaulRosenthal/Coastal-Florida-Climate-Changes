@@ -3,9 +3,9 @@
 
 @import "{{ site.theme }}";
 
-.btn {
+.button, .dropdown-section-head-button {
   display: inline-block;
-  margin-bottom: 1rem;
+  overflow: auto;
   color: rgba(255, 255, 255, 0.7);
   background-color: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.2);
@@ -14,17 +14,20 @@
   border-radius: 0.3rem;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
 
-  &:hover {
+  .button:hover, .dropdown-section-head-button:hover {
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
     background-color: rgba(255, 255, 255, 0.2);
     border-color: rgba(255, 255, 255, 0.3);
   }
 
-  + .btn {
-    margin-left: 1rem;
-  }
-
+//  + .button {
+//    margin-left: 1rem;
+//  }
+//
+//  + .dropdown-section-head-button {
+//    margin-left: 1rem;
+//  }
   @include large {
     padding: 0.75rem 1rem;
   }
@@ -35,15 +38,42 @@
   }
 
   @include small {
-    width: 45%;
-    padding: 0rem;
+    width: auto;
+    padding: 0.5rem;
     font-size: 0.9rem;
-
-    + .btn {
-      margin-top: 1rem;
-      margin-left: 0;
-    }
+    margin-right: 0.50rem;
+    margin-left: 0.50rem;
+    margin-top: 0.50rem;
+    margin-bottom:  0.50rem;
   }
+}
+
+.navigation-bar {
+  overflow: hidden;
+  display: inline;
+}
+
+.dropdown-section {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-section-content {
+  display: none;
+}
+
+.dropdown-section:hover .dropdown-section-content {
+  display: grid;
+  position: absolute;
+  overflow: auto;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.3rem;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  background-image: linear-gradient(100deg, #155799, #159957);
 }
 
 .page-header {
