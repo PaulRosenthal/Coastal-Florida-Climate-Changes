@@ -9,7 +9,7 @@ description: See how changing sea levels impact Panama City Beach and what its f
 ## Detailed Forecasts and Local Information
 
  - [View a detailed sea level rise and coastal flood risk report](/downloads/panama-city-beach/local-report-from-climate-central.pdf) for Panama City Beach from Climate Central
-  - Bay County has a [76% chance of being impacted by a named storm (including tropical storms) and a 35% chance of being impacted by a hurricane in 2021](https://tropical.colostate.edu/resources.html)
+  - Bay County has a [51% chance of being impacted by a named storm (including tropical storms) and a 28% chance of being impacted by a hurricane in 2021](https://tropical.colostate.edu/resources.html)
 
 ## Visualize Sea Level Change in Panama City Beach
 

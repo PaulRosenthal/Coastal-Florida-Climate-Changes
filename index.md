@@ -12,7 +12,7 @@ description: Visualize sea level changes and see what the future holds in northw
 
 This website has been created to help visualize the potential impacts sea level changes will have on the coastal areas of northwest Florida and as a resource to learn more about the projections for specific communities. The data on this website can be used to put more global changes into perspective, and see what the future might look like under various climate scenarios. Sea level rise and flood risk are both important factors that will define how significant changes are.
 
-**Predictions for the 2021 hurricane season in the panhandle are available [here](/additional-resources).**
+**Revised predictions for the 2021 hurricane season in the panhandle are available [here](/additional-resources).**
 
 ## Northwest Florida Coastal Communities
 
@@ -20,9 +20,11 @@ Choose a community to visualize various levels of sea level change and learn mor
 
 - [Destin](/communities/destin)
 - [Fort Walton Beach](/communities/fort-walton-beach)
+- [Miramar Beach](/communities/miramar-beach)
 - [Navarre Beach](/communities/navarre-beach)
 - [Panama City Beach](/communities/panama-city-beach)
 - [Pensacola Beach](/communities/pensacola-beach)
+- [Santa Rosa Beach and Highway 30A](/communities/santa-rosa-beach-30a)
 
 Don't see your area of interest? Search any area on the coast [here](/communities/custom-location).
 
