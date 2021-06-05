@@ -86,7 +86,7 @@ require([
   });
 
   var map = new Map({
-    basemap: "dark-gray",
+    basemap: "hybrid",
     layers: [changeInSeaLevelLayer]
   });
 
@@ -200,16 +200,6 @@ require([
     // Add widget to the top right corner of the view
     view.ui.add(layerList, "top-right");
   });
-  
-/*   //Working Layer List
-  view.when(function() {
-     var layerList = new LayerList({
-       view: view
-      });
-
-      // Add widget to the top right corner of the view
-      view.ui.add(layerList, "top-right");
-    }); */
 
 });
 </script>
