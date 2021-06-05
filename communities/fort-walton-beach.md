@@ -9,7 +9,7 @@ description: See how changing sea levels impact Fort Walton Beach and what its f
 ## Detailed Forecasts and Local Information
 
  - [View a detailed sea level rise and coastal flood risk report](/downloads/fort-walton-beach/local-report-from-climate-central.pdf) for Fort Walton Beach from Climate Central
-  - Okaloosa County has a [73% chance of being impacted by a named storm (including tropical storms) and a 30% chance of being impacted by a hurricane in 2021](https://tropical.colostate.edu/resources.html)
+  - Okaloosa County has a [50% chance of being impacted by a named storm (including tropical storms) and a 25% chance of being impacted by a hurricane in 2021](https://tropical.colostate.edu/resources.html)
 
 ## Visualize Sea Level Change in Fort Walton Beach
 

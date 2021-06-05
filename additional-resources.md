@@ -11,10 +11,11 @@ description: Explore additional resources to help visualize sea level changes an
 
 | County     | Chances of Impacts From a Tropical Storm or Greater in 2021 | Chances of Impacts From a Hurricane in 2021 | Chances of Impacts From a Major Hurricane in 2021 | Average Chances of Impacts From a Hurricane | Average Chances of Impacts From a Major Hurricane |
 |------------|:-----------------------------------------------------------:|:-------------------------------------------:|:-------------------------------------------------:|:-------------------------------------------:|:-------------------------------------------------:|
-| Escambia   |                                                         79% |                                         32% |                                               11% |                                         17% |                                                6% |
-| Santa Rosa |                                                         70% |                                         30% |                                                9% |                                         16% |                                                5% |
-| Okaloosa   |                                                         73% |                                         30% |                                                9% |                                         16% |                                                5% |
-| Bay        |                                                         76% |                                         35% |                                                9% |                                         19% |                                                5% |
+| Bay        |                                                         51% |                                         28% |                                                8% |                                         19% |                                                5% |
+| Escambia   |                                                         53% |                                         26% |                                               10% |                                         17% |                                                6% |
+| Okaloosa   |                                                         50% |                                         25% |                                                9% |                                         16% |                                                5% |
+| Santa Rosa |                                                         48% |                                         25% |                                                8% |                                         16% |                                                5% |
+| Walton     |                                                         50% |                                         26% |                                                9% |                                         17% |                                                6% |
 
 ## What is Happening Now?
 
