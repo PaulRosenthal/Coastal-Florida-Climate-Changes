@@ -21,13 +21,6 @@
     border-color: rgba(255, 255, 255, 0.3);
   }
 
-//  + .button {
-//    margin-left: 1rem;
-//  }
-//
-//  + .dropdown-section-head-button {
-//    margin-left: 1rem;
-//  }
   @include large {
     padding: 0.75rem 1rem;
   }
@@ -64,6 +57,7 @@
 
 .dropdown-section:hover .dropdown-section-content {
   display: grid;
+  grid-template-columns: 50% 50%;
   position: absolute;
   overflow: auto;
   color: rgba(255, 255, 255, 0.7);
@@ -74,6 +68,19 @@
   border-radius: 0.3rem;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
   background-image: linear-gradient(100deg, #155799, #159957);
+
+  @include large {
+    width: 350%;
+  }
+
+  @include medium {
+    width: 350%;
+  }
+
+  @include small {
+    width: 200%;
+    transform: translate(-40%, 0%);
+  }
 }
 
 .page-header {
