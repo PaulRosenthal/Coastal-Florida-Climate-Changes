@@ -1,207 +1,58 @@
-<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/light/main.css" />
-<script src="https://js.arcgis.com/4.18/"></script>
-<script>
-require([
-  "esri/Map",
-  "esri/views/MapView",
-  "esri/layers/GroupLayer",
-  "esri/layers/TileLayer",
-  "esri/widgets/LayerList",
-  "esri/widgets/Search"
-], function (Map, MapView, GroupLayer, TileLayer, LayerList, Search) {
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
 
-  var sea_level_today_layer = new TileLayer({
-    url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_0ft/MapServer",
-    title: "Sea Level Today",
-    visible: true
-  });
+  <!-- Load Leaflet from CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
 
-  var rise_of_1_ft_layer = new TileLayer({
-    url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_1ft/MapServer",
-    title: "Rise of 1 Foot From Today",
-    visible: false
-  });
+  <!-- Load Esri Leaflet from CDN -->
+  <script src="https://unpkg.com/esri-leaflet@3.0.2/dist/esri-leaflet.js"
+    integrity="sha512-myckXhaJsP7Q7MZva03Tfme/MSF5a6HC2xryjAM4FxPLHGqlh5VALCbywHnzs2uPoF/4G/QVXyYDDSkp5nPfig=="
+    crossorigin=""></script>
 
-  var rise_of_2_ft_layer = new TileLayer({
-    url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_2ft/MapServer",
-    title: "Rise of 2 Feet From Today",
-    visible: false
-  });
-
-
-  var rise_of_3_ft_layer = new TileLayer({
-    url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_3ft/MapServer",
-    title: "Rise of 3 Feet From Today",
-    visible: false
-  });
-
-  var rise_of_4_ft_layer = new TileLayer({
-    url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_4ft/MapServer",
-    title: "Rise of 4 Feet From Today",
-    visible: false
-  });
-
-  var rise_of_5_ft_layer = new TileLayer({
-    url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_5ft/MapServer",
-    title: "Rise of 5 Feet From Today",
-    visible: false
-  });
-
-  var rise_of_6_ft_layer = new TileLayer({
-    url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_6ft/MapServer",
-    title: "Rise of 6 Feet From Today",
-    visible: false
-  });
-
-  var rise_of_7_ft_layer = new TileLayer({
-    url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_7ft/MapServer",
-    title: "Rise of 7 Feet From Today",
-    visible: false
-  });
-  
-  var rise_of_8_ft_layer = new TileLayer({
-    url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_8ft/MapServer",
-    title: "Rise of 8 Feet From Today",
-    visible: false
-  });
-
-  var rise_of_9_ft_layer = new TileLayer({
-    url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_9ft/MapServer",
-    title: "Rise of 9 Feet From Today",
-    visible: false
-  });
-  
-  var rise_of_10_ft_layer = new TileLayer({
-    url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_10ft/MapServer",
-    title: "Rise of 10 Feet From Today",
-    visible: false
-  });
-
-  var changeInSeaLevelLayer = new GroupLayer({
-    title: "Change in Sea Level",
-    visible: true,
-    visibilityMode: "exclusive",
-    layers: [sea_level_today_layer,rise_of_1_ft_layer,rise_of_2_ft_layer,rise_of_3_ft_layer,rise_of_4_ft_layer,rise_of_5_ft_layer,rise_of_6_ft_layer,rise_of_7_ft_layer,rise_of_8_ft_layer,rise_of_9_ft_layer,rise_of_10_ft_layer],
-  });
-
-  var map = new Map({
-    basemap: "hybrid",
-    layers: [changeInSeaLevelLayer]
-  });
-
-  var view = new MapView({
-    container: "FLCoastMap",
-    map: map,
-    center: [{{ include.longitude }}, {{ include.latitude }}],
-    zoom: 16
-  });
-
-  view.ui.add(
-    new Search({
-      view: view
-    }),
-    "top-right"
-  );
-  
-  // Creates actions in the LayerList.
-
-  function defineActions(event) {
-    // The event object contains an item property.
-    // is is a ListItem referencing the associated layer
-    // and other properties. You can control the visibility of the
-    // item, its title, and actions using this object.
-
-    var item = event.item;
-
-    if (item.title === "Change in Sea Level") {
-      // An array of objects defining actions to place in the LayerList.
-      // By making this array two-dimensional, you can separate similar
-      // actions into separate groups with a breaking line.
-
-      item.actionsSections = [
-        [
-          {
-            title: "Go to full extent",
-            className: "esri-icon-zoom-out-fixed",
-            id: "full-extent"
-          },
-          {
-            title: "Layer information",
-            className: "esri-icon-description",
-            id: "information"
-          }
-        ],
-        [
-          {
-            title: "Increase opacity",
-            className: "esri-icon-up",
-            id: "increase-opacity"
-          },
-          {
-            title: "Decrease opacity",
-            className: "esri-icon-down",
-            id: "decrease-opacity"
-          }
-        ]
-      ];
-    }
-  }
-
-  view.when(function() {
-    // Create the LayerList widget with the associated actions
-    // and add it to the top-right corner of the view.
-
-    var layerList = new LayerList({
-      view: view,
-      // executes for each ListItem in the LayerList
-      listItemCreatedFunction: defineActions
-    });
-
-    // Event listener that fires each time an action is triggered
-
-    layerList.on("trigger-action", function(event) {
-      // The layer visible in the view at the time of the trigger.
-      var visibleLayer = sea_level_today_layer.visible ? sea_level_today_layer : rise_of_10_ft_layer;
-
-      // Capture the action id.
-      var id = event.action.id;
-
-      if (id === "full-extent") {
-        // if the full-extent action is triggered then navigate
-        // to the full extent of the visible layer
-        view.goTo(visibleLayer.fullExtent)
-        .catch(function(error){
-          if (error.name != "AbortError"){
-            console.error(error);
-          }
-        });
-      } else if (id === "information") {
-        // if the information action is triggered, then
-        // open the item details page of the service layer
-        window.open(visibleLayer.url);
-      } else if (id === "increase-opacity") {
-        // if the increase-opacity action is triggered, then
-        // increase the opacity of the GroupLayer by 0.25
-
-        if (changeInSeaLevelLayer.opacity < 1) {
-          changeInSeaLevelLayer.opacity += 0.25;
-        }
-      } else if (id === "decrease-opacity") {
-        // if the decrease-opacity action is triggered, then
-        // decrease the opacity of the GroupLayer by 0.25
-
-        if (changeInSeaLevelLayer.opacity > 0) {
-          changeInSeaLevelLayer.opacity -= 0.25;
-        }
-      }
-    });
-
-    // Add widget to the top right corner of the view
-    view.ui.add(layerList, "top-right");
-  });
-
-});
-</script>
 <div class="portrait-and-mobile">For best results, rotate your screen to landscape mode.</div>
+
 <div id="FLCoastMap" class="coastal-map"></div>
+
+<script>
+  //Define sea level tile map layers.
+  var rise_of_0_ft_layer = L.esri.tiledMapLayer({url: 'https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_0ft/MapServer', maxNativeZoom: 15, maxZoom: 22}),
+      rise_of_1_ft_layer = L.esri.tiledMapLayer({url: 'https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_1ft/MapServer', maxNativeZoom: 15, maxZoom: 22}),
+      rise_of_2_ft_layer = L.esri.tiledMapLayer({url: 'https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_2ft/MapServer', maxNativeZoom: 15, maxZoom: 22}),
+      rise_of_3_ft_layer = L.esri.tiledMapLayer({url: 'https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_3ft/MapServer', maxNativeZoom: 15, maxZoom: 22}),
+      rise_of_4_ft_layer = L.esri.tiledMapLayer({url: 'https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_4ft/MapServer', maxNativeZoom: 15, maxZoom: 22}),
+      rise_of_5_ft_layer = L.esri.tiledMapLayer({url: 'https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_5ft/MapServer', maxNativeZoom: 15, maxZoom: 22}),
+      rise_of_6_ft_layer = L.esri.tiledMapLayer({url: 'https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_6ft/MapServer', maxNativeZoom: 15, maxZoom: 22}),
+      rise_of_7_ft_layer = L.esri.tiledMapLayer({url: 'https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_7ft/MapServer', maxNativeZoom: 15, maxZoom: 22}),
+      rise_of_8_ft_layer = L.esri.tiledMapLayer({url: 'https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_8ft/MapServer', maxNativeZoom: 15, maxZoom: 22}),
+      rise_of_9_ft_layer = L.esri.tiledMapLayer({url: 'https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_9ft/MapServer', maxNativeZoom: 15, maxZoom: 22}),
+      rise_of_10_ft_layer = L.esri.tiledMapLayer({url: 'https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_10ft/MapServer', maxNativeZoom: 15, maxZoom: 22});
+
+  //Declare array of the sea level layers with common names for user control.    
+  var sea_level_layers = {
+      "Sea Level Today": rise_of_0_ft_layer,
+      "Rise of 1 Foot": rise_of_1_ft_layer,
+      "Rise of 2 Feet": rise_of_2_ft_layer,
+      "Rise of 3 Feet": rise_of_3_ft_layer,
+      "Rise of 4 Feet": rise_of_4_ft_layer,
+      "Rise of 5 Feet": rise_of_5_ft_layer,
+      "Rise of 6 Feet": rise_of_6_ft_layer,
+      "Rise of 7 Feet": rise_of_7_ft_layer,
+      "Rise of 8 Feet": rise_of_8_ft_layer,
+      "Rise of 9 Feet": rise_of_9_ft_layer,
+      "Rise of 10 Feet": rise_of_10_ft_layer
+    };
+  
+  //Declare the FLCoastMap using latitude and longitude.  
+  var FLCoastMap = L.map('FLCoastMap').setView([{{ include.latitude }}, {{ include.longitude }}], 17);
+
+  //Set base map layer.
+  L.esri.basemapLayer('Imagery', { maxNativeZoom: 19, maxZoom: 22 }).addTo(FLCoastMap);
+
+  //Add layer control for sea level layers.
+  L.control.layers(sea_level_layers).addTo(FLCoastMap);
+</script>
