@@ -14,11 +14,11 @@
     integrity="sha512-myckXhaJsP7Q7MZva03Tfme/MSF5a6HC2xryjAM4FxPLHGqlh5VALCbywHnzs2uPoF/4G/QVXyYDDSkp5nPfig=="
     crossorigin=""></script>
 
+
 <script src="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.5/esri-leaflet-geocoder.js"></script>
 <link rel="stylesheet" type="text/css" href="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.5/esri-leaflet-geocoder.css">
 
 <div class="portrait-and-mobile">For best results, rotate your screen to landscape mode.</div>
-
 <div id="FLCoastMap" class="coastal-map"></div>
 
 <script>
@@ -40,7 +40,7 @@
       "Sea Level Today": rise_of_0_ft_layer,
       "Rise of 1 Foot": rise_of_1_ft_layer,
       "Rise of 2 Feet": rise_of_2_ft_layer,
-      "Rise of 3 Feet": rise_of_3_ft_layer,
+      "Rise of 3 Feet": rise_of_3_ft_layer
       "Rise of 4 Feet": rise_of_4_ft_layer,
       "Rise of 5 Feet": rise_of_5_ft_layer,
       "Rise of 6 Feet": rise_of_6_ft_layer,
@@ -58,6 +58,7 @@
 
   //Add layer control for sea level layers.
   L.control.layers(sea_level_layers).addTo(FLCoastMap);
+
 
   var searchControl = new L.esri.Controls.Geosearch().addTo(FLCoastMap);
 
