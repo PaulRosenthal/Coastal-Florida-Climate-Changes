@@ -23,17 +23,19 @@
 
   @include large {
     padding: 0.75rem 1rem;
+    margin: 0.5rem 0.5rem;
   }
 
   @include medium {
     padding: 0.6rem 0.9rem;
     font-size: 0.9rem;
+    margin: 0.5rem 0.5rem;
   }
 
   @include small {
     width: auto;
-    padding: 0.5rem;
-    font-size: 0.9rem;
+    padding: 0.75rem;
+    font-size: 1.00rem;
     margin-right: 0.50rem;
     margin-left: 0.50rem;
     margin-top: 0.50rem;
