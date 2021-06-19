@@ -7,6 +7,7 @@
   - In particular, the Florida Climate Center's [newsletters](https://climatecenter.fsu.edu/products-services/newsletter) are a great source of current information
   - Additionally, the Climate Center releases [monthly climate summaries](https://climatecenter.fsu.edu/products-services/summaries)
 - [Hurricane Risk By County](https://www.arcgis.com/apps/Cascade/index.html?appid=8f6013fdba6445e9a8732ff6cab9cd1a)
+- Ward Law reached out to provide their [hurricane preparedness guide](https://www.855dolor55.com/en/hurricane-guide/) as a practical tool for steps to take when preparing for a hurricane
 
 ## Our Climate on a Global Scale
 
