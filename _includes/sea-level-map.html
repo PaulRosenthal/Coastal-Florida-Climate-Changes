@@ -14,11 +14,50 @@
     integrity="sha512-myckXhaJsP7Q7MZva03Tfme/MSF5a6HC2xryjAM4FxPLHGqlh5VALCbywHnzs2uPoF/4G/QVXyYDDSkp5nPfig=="
     crossorigin=""></script>
 
+  <!-- Load Leaflet Control OSM Geocoder (https://github.com/k4r573n/leaflet-control-osm-geocoder)-->
+  <script src="https://rawgit.com/k4r573n/leaflet-control-osm-geocoder/master/Control.OSMGeocoder.js"></script>
+	<link rel="stylesheet" href="https://rawgit.com/k4r573n/leaflet-control-osm-geocoder/master/Control.OSMGeocoder.css" />
+
+  <!-- Insert CSS that overrides the layer control toggle to display layer explanation text -->
+  <style>
+    .leaflet-touch .leaflet-control-layers-toggle {
+        height: 44px;
+        width: auto;
+    }
+    
+    .leaflet-control-layers-toggle:after{ 
+        content: "Set Map Backgrounds and Sea Levels"; 
+        display: inline-block;
+        font-weight: bold;
+        color: #000;
+    }
+    .leaflet-control-layers-toggle{ 
+        width: auto;
+        background-position: 3px 50% ;
+        padding: 3px;
+        padding-left: 36px;
+        text-decoration: none;
+        line-height: 36px;
+    }
+    </style>
+
 <div class="portrait-and-mobile">For best results, rotate your screen to landscape mode.</div>
 
 <div id="FLCoastMap" class="coastal-map"></div>
 
 <script>
+    //Define base layers.
+    var satellite = L.esri.basemapLayer('Imagery'),
+        street_names = L.esri.basemapLayer('Streets'),
+        topographic = L.esri.basemapLayer('Topographic');
+
+    //Declare array of the base layers with common names for user control.    
+    var basemaps = {
+      "Satellite": satellite,
+      "Streets": street_names,
+      "Topographic": topographic
+    };
+
   //Define sea level tile map layers.
   var rise_of_0_ft_layer = L.esri.tiledMapLayer({url: 'https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_0ft/MapServer', maxNativeZoom: 15, maxZoom: 22}),
       rise_of_1_ft_layer = L.esri.tiledMapLayer({url: 'https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_1ft/MapServer', maxNativeZoom: 15, maxZoom: 22}),
@@ -50,9 +89,31 @@
   //Declare the FLCoastMap using latitude and longitude.  
   var FLCoastMap = L.map('FLCoastMap').setView([{{ include.latitude }}, {{ include.longitude }}], 17);
 
-  //Set base map layer.
+  //Set default view basemap layer.
   L.esri.basemapLayer('Imagery', { maxNativeZoom: 19, maxZoom: 22 }).addTo(FLCoastMap);
 
   //Add layer control for sea level layers.
-  L.control.layers(sea_level_layers).addTo(FLCoastMap);
+  L.control.layers(basemaps, sea_level_layers).addTo(FLCoastMap);
+
+  //Add geocoder for address search.
+  var geocoderOptions = {
+    collapsed: false,
+    position: 'topright',
+    text: 'Search', 
+    placeholder: 'Enter a landmark...',
+    bounds: null,
+    email: null,
+    callback: function (results) {
+			var bbox = results[0].boundingbox,
+				first = new L.LatLng(bbox[0], bbox[2]),
+				second = new L.LatLng(bbox[1], bbox[3]),
+				bounds = new L.LatLngBounds([first, second]);
+        //Set the map to the location the user has searched for with a maximum zoom level of 18.
+        this._map.fitBounds(bounds, {maxZoom: 18});
+    }
+  };
+
+  var osmGeocoder = new L.Control.OSMGeocoder(geocoderOptions);
+
+  FLCoastMap.addControl(osmGeocoder);
 </script>
