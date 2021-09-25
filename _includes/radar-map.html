@@ -1,35 +1,32 @@
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.control.min.css" />
 
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/iso8601-js-period@0.2.1/iso8601.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.min.js"></script>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.control.min.css" />
-
-
-    <div id="map" style="height: 100%; width: 100%"></div>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/iso8601-js-period@0.2.1/iso8601.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.min.js"></script>
-
-    <script>
-        var map = L.map('map', {
-            zoom: 10,
-            center: [38.705, 1.15],
-            timeDimension: true,
-            timeDimensionOptions: {
-                timeInterval: "2014-09-30/2014-10-30",
-                period: "PT1H"
-            },
-            timeDimensionControl: true,
-        });
+<div id="map" class="coastal-map"></div>
+<script>
+    var map = L.map('map', {
+        zoom: 10,
+        center: [38.705, 1.15],
+        timeDimension: true,
+        timeDimensionOptions: {
+            timeInterval: "2014-09-30/2014-10-30",
+            period: "PT1H"
+        },
+        timeDimensionControl: true,
+    });
         
-        var wmsUrl = "https://thredds.socib.es/thredds/wms/observational/hf_radar/hf_radar_ibiza-scb_codarssproc001_aggregation/dep0001_hf-radar-ibiza_scb-codarssproc001_L1_agg.nc"
-        var wmsLayer = L.tileLayer.wms(wmsUrl, {
-            layers: 'sea_water_velocity',
-            format: 'image/png',
-            transparent: true,
-            attribution: 'SOCIB HF RADAR | sea_water_velocity'
-        });
+    var wmsUrl = "https://thredds.socib.es/thredds/wms/observational/hf_radar/hf_radar_ibiza-scb_codarssproc001_aggregation/dep0001_hf-radar-ibiza_scb-codarssproc001_L1_agg.nc"
+    var wmsLayer = L.tileLayer.wms(wmsUrl, {
+        layers: 'sea_water_velocity',
+        format: 'image/png',
+        transparent: true,
+        attribution: 'SOCIB HF RADAR | sea_water_velocity'
+    });
         
-        // Create and add a TimeDimension Layer to the map
-        var tdWmsLayer = L.timeDimension.layer.wms(wmsLayer);
-        tdWmsLayer.addTo(map);
-    </script>
+    // Create and add a TimeDimension Layer to the map
+    var tdWmsLayer = L.timeDimension.layer.wms(wmsLayer);
+    tdWmsLayer.addTo(map);
+</script>
