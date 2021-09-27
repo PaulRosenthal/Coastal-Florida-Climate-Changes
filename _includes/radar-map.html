@@ -48,6 +48,8 @@ var map = L.map('map', {
             buffer: 10,
             transitionTime: 250,
             loop: true,
+            timeSliderDragUpdate: true,
+            minBufferReady: -1
         }
     },
     center: [38.0, -90.50],
@@ -67,7 +69,7 @@ var radarWMS = L.nonTiledLayer.wms(wmsUrl, {
 });
 
 var testTimeLayer = L.timeDimension.layer.wms(radarWMS, {
-    updateTimeDimension: true,
+    updateTimeDimension: false,
     wmsVersion: '1.3.0'
 });
 testTimeLayer.addTo(map);
