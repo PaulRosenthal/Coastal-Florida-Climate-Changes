@@ -70,7 +70,8 @@ var radarWMS = L.nonTiledLayer.wms(wmsUrl, {
 });
 
 var testTimeLayer = L.timeDimension.layer.wms(radarWMS, {
-    updateTimeDimension: false,
+    //updateTimeDimension: false,
+    updateTimeDimensionMode: 'replace',
     setDefaultTime: false,
     wmsVersion: '1.3.0'
 });
