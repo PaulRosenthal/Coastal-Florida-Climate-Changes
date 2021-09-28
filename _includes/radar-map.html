@@ -70,12 +70,12 @@ var radarWMS = L.nonTiledLayer.wms(wmsUrl, {
     attribution: 'NOAA Radar Base Reflectivity'
 });
 
-var testTimeLayer = L.timeDimension.layer.wms(radarWMS, {
-    updateTimeDimension: false,
+//var testTimeLayer = L.timeDimension.layer.wms(radarWMS, {
+    //updateTimeDimension: false,
     //updateTimeDimensionMode: 'replace',
-    wmsVersion: '1.3.0'
-});
-testTimeLayer.addTo(map);
+    //wmsVersion: '1.3.0'
+//});
+//testTimeLayer.addTo(map);
 
 var theLegend = L.control({
     position: 'topright'
