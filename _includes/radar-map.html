@@ -29,7 +29,8 @@
 <!-- Example from: https://apps.socib.es/Leaflet.TimeDimension/examples/example14.html -->
 <script>
 var endDate = new Date();
-endDate.setUTCMinutes(endDate.getUTCMinutes(), 0, 0);
+//endDate.setUTCMinutes(endDate.getUTCMinutes(), 0, 0);
+endDate.setUTCMinutes(0, 0, 0);
 console.log("The current time is: " + endDate);
 
 var map = L.map('map', {
@@ -38,8 +39,8 @@ var map = L.map('map', {
     timeDimension: true,
     timeDimensionControl: true,
     timeDimensionOptions:{
-        timeInterval: "PT3H/" + endDate.toISOString(),
-        period: "PT5M",
+        timeInterval: "PT4H/" + endDate.toISOString(),
+        period: "PT4M",
         currentTime: endDate
     },
 
