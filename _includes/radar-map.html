@@ -59,9 +59,9 @@ L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-var wmsUrl = "https://idpgis.ncep.noaa.gov/arcgis/services/radar/radar_base_reflectivity_time/ImageServer/WMSServer"
+var wmsUrl = "http://idpgis.ncep.noaa.gov/arcgis/services/radar/radar_base_reflectivity_time/ImageServer/WMSServer"
 var radarWMS = L.nonTiledLayer.wms(wmsUrl, {
-    //layers: '1',
+    layers: '0',
     format: 'image/png',
     transparent: true,
     opacity: 0.8,
