@@ -14,9 +14,10 @@
     integrity="sha512-myckXhaJsP7Q7MZva03Tfme/MSF5a6HC2xryjAM4FxPLHGqlh5VALCbywHnzs2uPoF/4G/QVXyYDDSkp5nPfig=="
     crossorigin=""></script>
 
-  <!-- Load Leaflet Control OSM Geocoder (https://github.com/k4r573n/leaflet-control-osm-geocoder)-->
-  <script src="https://rawgit.com/k4r573n/leaflet-control-osm-geocoder/master/Control.OSMGeocoder.js"></script>
-	<link rel="stylesheet" href="https://rawgit.com/k4r573n/leaflet-control-osm-geocoder/master/Control.OSMGeocoder.css" />
+  <!-- Load Leaflet Control Geocoder (Uses fork of https://github.com/stefanocudini/leaflet-search) -->
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/PaulRosenthal/leaflet-search/master/src/leaflet-search.css" />
+	<link rel="stylesheet" href="https://raw.githubusercontent.com/PaulRosenthal/leaflet-search/master/src/leaflet-search.mobile.css" />
+  <script src="https://raw.githubusercontent.com/PaulRosenthal/leaflet-search/master/src/leaflet-search.js"></script>
 
   <!-- Insert CSS that overrides the layer control toggle to display layer explanation text -->
   <style>
@@ -96,24 +97,13 @@
   L.control.layers(basemaps, sea_level_layers).addTo(FLCoastMap);
 
   //Add geocoder for address search.
-  var geocoderOptions = {
-    collapsed: false,
-    position: 'topright',
-    text: 'Search', 
-    placeholder: 'Enter a landmark...',
-    bounds: null,
-    email: null,
-    callback: function (results) {
-			var bbox = results[0].boundingbox,
-				first = new L.LatLng(bbox[0], bbox[2]),
-				second = new L.LatLng(bbox[1], bbox[3]),
-				bounds = new L.LatLngBounds([first, second]);
-        //Set the map to the location the user has searched for with a maximum zoom level of 18.
-        this._map.fitBounds(bounds, {maxZoom: 18});
-    }
-  };
-
-  var osmGeocoder = new L.Control.OSMGeocoder(geocoderOptions);
-
-  FLCoastMap.addControl(osmGeocoder);
+	FLCoastMap.addControl( new L.Control.Search({
+		url: 'https://nominatim.openstreetmap.org/search?format=json&q={s}',
+		jsonpParam: 'json_callback',
+		propertyName: 'display_name',
+		propertyLoc: ['lat','lon'],
+		autoCollapse: true,
+		autoType: true,
+		minLength: 2
+	}));
 </script>
