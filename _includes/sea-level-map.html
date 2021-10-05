@@ -21,6 +21,32 @@
   <!-- Load Leaflet Control Geocoder JavaScript (Uses https://github.com/stefanocudini/leaflet-search) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-search/3.0.2/leaflet-search.src.js" crossorigin=""></script> 
 
+  <!-- Inject Leaflet Control Geocoder CSS For Modified Image Locations -->
+  <style>
+    .leaflet-control-search .search-button:hover,
+    .leaflet-control-search .search-button {
+      background-image: url('../img/search-icon-mobile.png');
+      -webkit-border-radius: 4px;
+              border-radius: 4px;
+      background-position: 1px 1px;	
+      width:32px;
+      height:32px;
+    }
+    .leaflet-control-search.search-load .search-input {
+      background: url('../img/search-loading-icon.gif') no-repeat center right #fff;
+    }
+    .leaflet-control-search .search-cancel {
+      background-image: url('../img/search-icon-mobile.png');
+      -webkit-border-radius: 4px;
+              border-radius: 4px;
+      background-position: 0px -62px;
+      width:26px;
+      height:26px;
+      right:34px;
+      margin:3px;
+    }
+  </style>
+  
   <!-- Insert CSS that overrides the layer control toggle to display layer explanation text -->
   <style>
     .leaflet-touch .leaflet-control-layers-toggle {
