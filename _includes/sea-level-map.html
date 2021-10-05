@@ -1,6 +1,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
 
+  <!-- Load Leaflet Control Geocoder CSS (Uses https://github.com/stefanocudini/leaflet-search) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-search/3.0.2/leaflet-search.src.css" crossorigin=""/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-search/3.0.2/leaflet-search.mobile.src.css" crossorigin=""/>
+
   <!-- Load Leaflet from CDN -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -14,10 +18,35 @@
     integrity="sha512-myckXhaJsP7Q7MZva03Tfme/MSF5a6HC2xryjAM4FxPLHGqlh5VALCbywHnzs2uPoF/4G/QVXyYDDSkp5nPfig=="
     crossorigin=""></script>
 
-  <!-- Load Leaflet Control OSM Geocoder (https://github.com/k4r573n/leaflet-control-osm-geocoder)-->
-  <script src="https://rawgit.com/k4r573n/leaflet-control-osm-geocoder/master/Control.OSMGeocoder.js"></script>
-	<link rel="stylesheet" href="https://rawgit.com/k4r573n/leaflet-control-osm-geocoder/master/Control.OSMGeocoder.css" />
+  <!-- Load Leaflet Control Geocoder JavaScript (Uses https://github.com/stefanocudini/leaflet-search) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-search/3.0.2/leaflet-search.src.js" crossorigin=""></script> 
 
+  <!-- Inject Leaflet Control Geocoder CSS For Modified Image Locations -->
+  <style>
+    .leaflet-control-search .search-button:hover,
+    .leaflet-control-search .search-button {
+      background-image: url('../img/search-icon-mobile.png');
+      -webkit-border-radius: 4px;
+              border-radius: 4px;
+      background-position: 1px 1px;	
+      width:32px;
+      height:32px;
+    }
+    .leaflet-control-search.search-load .search-input {
+      background: url('../img/search-loading-icon.gif') no-repeat center right #fff;
+    }
+    .leaflet-control-search .search-cancel {
+      background-image: url('../img/search-icon-mobile.png');
+      -webkit-border-radius: 4px;
+              border-radius: 4px;
+      background-position: 0px -62px;
+      width:26px;
+      height:26px;
+      right:34px;
+      margin:3px;
+    }
+  </style>
+  
   <!-- Insert CSS that overrides the layer control toggle to display layer explanation text -->
   <style>
     .leaflet-touch .leaflet-control-layers-toggle {
@@ -96,24 +125,14 @@
   L.control.layers(basemaps, sea_level_layers).addTo(FLCoastMap);
 
   //Add geocoder for address search.
-  var geocoderOptions = {
-    collapsed: false,
-    position: 'topright',
-    text: 'Search', 
-    placeholder: 'Enter a landmark...',
-    bounds: null,
-    email: null,
-    callback: function (results) {
-			var bbox = results[0].boundingbox,
-				first = new L.LatLng(bbox[0], bbox[2]),
-				second = new L.LatLng(bbox[1], bbox[3]),
-				bounds = new L.LatLngBounds([first, second]);
-        //Set the map to the location the user has searched for with a maximum zoom level of 18.
-        this._map.fitBounds(bounds, {maxZoom: 18});
-    }
-  };
-
-  var osmGeocoder = new L.Control.OSMGeocoder(geocoderOptions);
-
-  FLCoastMap.addControl(osmGeocoder);
+	FLCoastMap.addControl( new L.Control.Search({
+		url: 'https://nominatim.openstreetmap.org/search?format=json&q={s}',
+		jsonpParam: 'json_callback',
+		propertyName: 'display_name',
+		propertyLoc: ['lat','lon'],
+		autoCollapse: true,
+		autoType: true,
+		minLength: 2,
+                marker: false
+	}));
 </script>
