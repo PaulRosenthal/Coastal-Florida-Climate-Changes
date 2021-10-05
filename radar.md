@@ -1,15 +1,11 @@
 ---
 layout: default
-title: "Radar (Beta)" # This title is surrounded by quotation marks as it contains a colon.
-display-title: "Radar (Beta)"
+title: "Radar (Coming Soon)"
+display-title: "Radar (Coming Soon)"
 tagline: View Live Radar For The Coast
-description: Beta Version
+description: Live Radar For The Emerald Coast
 ---
 
-## New! Live Radar!
+## Coming Soon
 
-The live radar functionality is currently in beta.
-
-## Visualize Live Radar
-
-{% include radar-map.html %}
+Live radar functionality is anticipated soon. For now, I recommend using [Windy](https://www.windy.com/).
