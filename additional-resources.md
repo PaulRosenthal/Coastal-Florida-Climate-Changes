@@ -5,17 +5,9 @@ tagline: Explore Further
 description: Explore additional resources to help visualize sea level changes and impacts to areas you care about.
 ---
 
-## 2021 Tropical Storm and Hurricane Predictions
+## Tropical Storm and Hurricane Predictions
 
-2021 is projected to be an extremely busy year for tropical storms and hurricanes in the panhandle. The table below was created using [data from Colorado State University](https://tropical.colostate.edu/resources.html), and [their website](https://tropical.colostate.edu/resources.html) contains additional data about the panhandle and other coastal areas.
-
-| County     | Chances of Impacts From a Tropical Storm or Greater in 2021 | Chances of Impacts From a Hurricane in 2021 | Chances of Impacts From a Major Hurricane in 2021 | Average Chances of Impacts From a Hurricane | Average Chances of Impacts From a Major Hurricane |
-|------------|:-----------------------------------------------------------:|:-------------------------------------------:|:-------------------------------------------------:|:-------------------------------------------:|:-------------------------------------------------:|
-| Bay        |                                                         51% |                                         28% |                                                8% |                                         19% |                                                5% |
-| Escambia   |                                                         53% |                                         26% |                                               10% |                                         17% |                                                6% |
-| Okaloosa   |                                                         50% |                                         25% |                                                9% |                                         16% |                                                5% |
-| Santa Rosa |                                                         48% |                                         25% |                                                8% |                                         16% |                                                5% |
-| Walton     |                                                         50% |                                         26% |                                                9% |                                         17% |                                                6% |
+Interested in learning about the likelihood your area of interest will be impacted by a tropical storm or hurricane this year? This [resource from Colorado State University](https://tropical.colostate.edu/resources.html) is a great place to get started.
 
 ## What is Happening Now?
 
