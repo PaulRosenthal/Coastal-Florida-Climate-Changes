@@ -9,7 +9,7 @@ description: See how changing sea levels impact Pensacola Beach and what its fut
 ## Detailed Forecasts and Local Information
 
  - [View a detailed sea level rise and coastal flood risk report](/downloads/pensacola-beach/local-report-from-climate-central.pdf) for Pensacola Beach from Climate Central
- - Check out Escambia County's [chances of being impacted by tropical storm or a hurricane](https://tropical.colostate.edu/resources.html)
+ - Check out Escambia County's [chances of being impacted by a tropical storm or hurricane](https://tropical.colostate.edu/resources.html)
 
 ## Visualize Sea Level Change in Pensacola Beach
 

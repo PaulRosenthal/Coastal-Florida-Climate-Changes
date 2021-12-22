@@ -9,7 +9,7 @@ description: See how changing sea levels impact Destin and what its future holds
 ## Detailed Forecasts and Local Information
 
  - [View a detailed sea level rise and coastal flood risk report](/downloads/destin/local-report-from-climate-central.pdf) for Destin from Climate Central
- - Check out Okaloosa County's [chances of being impacted by tropical storm or a hurricane](https://tropical.colostate.edu/resources.html)
+ - Check out Okaloosa County's [chances of being impacted by a tropical storm or hurricane](https://tropical.colostate.edu/resources.html)
 
 ## Visualize Sea Level Change in Destin
 

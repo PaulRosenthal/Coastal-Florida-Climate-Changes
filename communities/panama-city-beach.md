@@ -9,7 +9,7 @@ description: See how changing sea levels impact Panama City Beach and what its f
 ## Detailed Forecasts and Local Information
 
  - [View a detailed sea level rise and coastal flood risk report](/downloads/panama-city-beach/local-report-from-climate-central.pdf) for Panama City Beach from Climate Central
- - Check out Bay County's [chances of being impacted by tropical storm or a hurricane](https://tropical.colostate.edu/resources.html)
+ - Check out Bay County's [chances of being impacted by a tropical storm or hurricane](https://tropical.colostate.edu/resources.html)
 
 ## Visualize Sea Level Change in Panama City Beach
 

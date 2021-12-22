@@ -9,7 +9,7 @@ description: See how changing sea levels impact Navarre Beach and what its futur
 ## Detailed Forecasts and Local Information
 
  - [View a detailed sea level rise and coastal flood risk report](/downloads/navarre-beach/local-report-from-climate-central.pdf) for Navarre Beach from Climate Central
- - Check out Santa Rosa County's [chances of being impacted by tropical storm or a hurricane](https://tropical.colostate.edu/resources.html)
+ - Check out Santa Rosa County's [chances of being impacted by a tropical storm or hurricane](https://tropical.colostate.edu/resources.html)
  
 ## Visualize Sea Level Change in Navarre Beach
 
