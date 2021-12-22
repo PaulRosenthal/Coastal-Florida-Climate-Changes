@@ -14,6 +14,6 @@ Use the search bar in the map below to find your area.
 
 ## Probability of Impacts From Tropical Storms and Hurricanes
 
-Interested in learning more about the chances of being impacted by a tropical storm, hurricane, or major hurricane in your area of interest? See [Colorado State University's 2021 Tropical Cyclone Impact Probabilities List](https://tropical.colostate.edu/resources.html).
+Interested in learning more about the chances of being impacted by a tropical storm, hurricane, or major hurricane in your area of interest? See [Colorado State University's Tropical Cyclone Impact Probabilities List](https://tropical.colostate.edu/resources.html).
 
 {% include resources.md map_location_statement="While the map on this page is useful for helping visualize what sea level rise looks like in your area of interest, there are many other great resources available." %}

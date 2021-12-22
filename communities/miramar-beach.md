@@ -9,7 +9,7 @@ description: See how changing sea levels impact Miramar Beach and what its futur
 ## Detailed Forecasts and Local Information
 
  - [View a detailed sea level rise and coastal flood risk report](/downloads/miramar-beach/local-report-from-climate-central.pdf) for Miramar Beach from Climate Central
- - Walton County has a [50% chance of being impacted by a named storm (including tropical storms) and a 26% chance of being impacted by a hurricane in 2021](https://tropical.colostate.edu/resources.html)
+ - Check out Walton County's [chances of being impacted by tropical storm or a hurricane](https://tropical.colostate.edu/resources.html)
 
 ## Visualize Sea Level Change in Miramar Beach
 
