@@ -9,7 +9,7 @@ description: See how changing sea levels impact Santa Rosa Beach and Highway 30A
 ## Detailed Forecasts and Local Information
 
  - [View a detailed sea level rise and coastal flood risk report](/downloads/santa-rosa-beach-30a/local-report-from-climate-central.pdf) for Walton County (which includes Santa Rosa Beach and Highway 30A) from Climate Central
- - Walton County has a [50% chance of being impacted by a named storm (including tropical storms) and a 26% chance of being impacted by a hurricane in 2021](https://tropical.colostate.edu/resources.html)
+ - Check out Walton County's [chances of being impacted by a tropical storm or hurricane](https://tropical.colostate.edu/resources.html)
 
 ## Visualize Sea Level Change in Santa Rosa Beach and Highway 30A
 
