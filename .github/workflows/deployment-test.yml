@@ -4,12 +4,17 @@ on: [push]
 
 jobs:
   Jekyll-Deploy-Test-Action:
-    runs-on: PaulRosenthal/Jekyll-Deploy-Test-Action@v1
+    runs-on: ubuntu-latest
     name: Jekyll Deployment Test
     steps:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Jekyll Deploy Test
       uses: PaulRosenthal/Jekyll-Deploy-Test-Action@v1
+    - name: Prepare Ruby Environment For Tests
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.6
+        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Run Tests
-      run: bundle exec rspec spec
+      run: rspec spec
