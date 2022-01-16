@@ -1,9 +1,16 @@
-describe "sample", type: :feature, js: true do
-    it "has the page title" do
-      visit '/'
-      # `binding.pry` is useful for crafting the right selector
-      # or checking the actual state of the page
-      # binding.pry # test will pause here
-      expect(find('.post-link').text).to eq('Sea Florida Change Homepage')
+require 'spec_helper'
+
+# Array of all generated pages
+site = File.join(File.dirname(__FILE__), '..', '_site', '**', '*.html')
+PAGES = Dir.glob(site).map{ |p| p.gsub(/[^_]+\/_site(.*)/, '\\1') }
+
+PAGES.each do |p|
+  describe p do
+    it_behaves_like 'Page'
+    # it_behaves_like 'Page with search box' unless p == '/search.html'
+
+    before :each do
+      visit p
     end
   end
+end
