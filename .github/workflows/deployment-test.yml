@@ -16,4 +16,4 @@ jobs:
       with:
         ruby-version: 2.6
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-      run: rspec spec
+    - run: rspec spec
