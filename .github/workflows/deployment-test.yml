@@ -11,3 +11,5 @@ jobs:
       uses: actions/checkout@v2
     - name: Jekyll Deploy Test
       uses: PaulRosenthal/Jekyll-Deploy-Test-Action@v1
+    - name: Run Tests
+      uses: rspec spec
