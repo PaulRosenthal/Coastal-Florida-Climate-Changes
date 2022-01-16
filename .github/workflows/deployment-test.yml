@@ -12,4 +12,4 @@ jobs:
     - name: Jekyll Deploy Test
       uses: PaulRosenthal/Jekyll-Deploy-Test-Action@v1
     - name: Run Tests
-      run: rspec spec
+      run: ls
