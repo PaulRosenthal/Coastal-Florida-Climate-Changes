@@ -1,4 +1,4 @@
-name: Automated Deployment Test
+name: Continuous Integration Tests
 
 on: [push]
 
@@ -7,14 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     name: Jekyll Deployment Test
     steps:
-    - name: Checkout
+    - name: Checkout Repository
       uses: actions/checkout@v2
     - name: Jekyll Deploy Test
       uses: PaulRosenthal/Jekyll-Deploy-Test-Action@v1
-    - name: Prepare Environment to Run Tests
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 2.6
-        bundler-cache: false
-    - name: Run Tests 
+   # - name: Prepare Environment to Run Tests
+   #   uses: ruby/setup-ruby@v1
+   #   with:
+   #     ruby-version: 2.6
+   #     bundler-cache: false
+    - name: Run Rspec Tests 
       run: bundle install && rspec spec --format documentation
