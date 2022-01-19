@@ -33,4 +33,9 @@ jobs:
         ruby-version: 2.6
         bundler-cache: false
     - name: Run RSpec Tests 
-      run: bundle install && rspec spec --format documentation
+      run: bundle install && rspec spec --format documentation --format documentation:rspec_tests_output.txt
+    - name: Upload RSpec Tests Results
+      uses: actions/upload-artifact@v2
+      with:
+        name: rspec_tests_results
+        path: rspec_tests_output.txt
