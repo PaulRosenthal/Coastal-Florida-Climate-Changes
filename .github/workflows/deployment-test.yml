@@ -17,4 +17,4 @@ jobs:
         ruby-version: 2.6
         bundler-cache: false
     - name: Run Tests 
-      run: bundle install && rspec spec
+      run: bundle install && rspec spec --format documentation
