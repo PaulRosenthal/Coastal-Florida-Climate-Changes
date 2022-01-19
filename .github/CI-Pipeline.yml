@@ -25,6 +25,8 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: test_site_directory
+    - name: Checkout Repository
+      uses: actions/checkout@v2
     - name: Prepare Environment to Run Tests
       uses: ruby/setup-ruby@v1
       with:
