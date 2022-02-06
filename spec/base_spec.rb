@@ -7,7 +7,10 @@ PAGES = Dir.glob(site).map{ |p| p.gsub(/[^_]+\/_site(.*)/, '\\1') }
 PAGES.each do |p|
   describe p do
     it_behaves_like 'Page'
-    it_behaves_like 'Location Page' if p.start_with?("/communities/")
+    
+    if p.start_with?("/communities/")
+      it_behaves_like 'Location Page'
+    end
 
     before :each do
       visit p
