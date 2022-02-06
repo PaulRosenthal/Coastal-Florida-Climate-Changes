@@ -6,8 +6,8 @@ PAGES = Dir.glob(site).map{ |p| p.gsub(/[^_]+\/_site(.*)/, '\\1') }
 
 PAGES.each do |p|
   describe p do
-    it_behaves_like 'Page'
-    # it_behaves_like 'Page with search box' unless p == '/search.html'
+    it_behaves_like 'All Pages'
+    # it_behaves_like 'Location Pages' unless p == '/index.html'
 
     before :each do
       visit p
