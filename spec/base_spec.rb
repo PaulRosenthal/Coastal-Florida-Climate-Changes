@@ -8,12 +8,11 @@ PAGES.each do |p|
   describe p do
     it_behaves_like 'Page'
     
-    if p.start_with?("/communities/") == 1
-      # it_behaves_like 'Location Page'
-      it 'has a sea level visualization map' do
-        expect(page).to have_text("Visualize Sea Level Change in")
+    if p.start_with?("/communities") == 0
+      it_behaves_like 'Location Page'
       end
-    end
+
+    puts p
 
     before :each do
       visit p
