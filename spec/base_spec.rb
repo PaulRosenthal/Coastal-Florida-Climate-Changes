@@ -8,11 +8,11 @@ PAGES.each do |p|
   describe p do
     it_behaves_like 'Page'
     
-    if p.start_with?("/communities") == 0
+    page_extension = p.to_s
+    if page_extension.start_with?("/communities") == true
       it_behaves_like 'Location Page'
+      puts "{p} is a page that starts with /communities."
       end
-
-    puts p
 
     before :each do
       visit p
