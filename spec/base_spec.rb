@@ -10,10 +10,8 @@ PAGES.each do |p|
     
     page_extension = p.to_s
     if page_extension.start_with?("/communities") == true
-    puts p
-    puts "is a page that starts with /communities." 
     it_behaves_like 'Location Page'
-      end
+    end
 
     before :each do
       visit p

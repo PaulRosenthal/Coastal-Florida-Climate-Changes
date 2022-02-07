@@ -1,4 +1,3 @@
-# Every page that is accessible by users should contain the word "Florida" within it.
 RSpec.shared_examples_for 'Page' do
   it 'renders correctly' do
     expect(page.status_code).to be(200)
@@ -12,7 +11,7 @@ RSpec.shared_examples_for 'Page' do
 end
 
 RSpec.shared_examples_for 'Location Page' do
-  it 'has a sea level visualization map' do
-    expect(page).to have_text("Visualize Sea Level Change in")
+  it 'has a statement about sea level impacts' do
+    expect(page).to have_text("Sea Levels Impact")
   end
 end
