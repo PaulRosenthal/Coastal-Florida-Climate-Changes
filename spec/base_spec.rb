@@ -8,7 +8,7 @@ PAGES.each do |p|
   describe p do
     it_behaves_like 'Page'
     
-    if p.start_with?("/communities/")
+    if p.start_with?("/communities/") == 1
       it_behaves_like 'Location Page'
     end
 
