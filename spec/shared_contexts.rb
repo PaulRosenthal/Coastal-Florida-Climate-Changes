@@ -15,6 +15,6 @@ RSpec.shared_examples_for 'Location Page' do
     expect(page).to have_text("Sea Levels Impact")
   end
   it 'contains a sea level visualization map' do
-    expect(html).to have_selector('div', id: 'FLCoastMap')
+    expect(page).to have_selector('div', id: 'FLCoastMap')
   end
 end
