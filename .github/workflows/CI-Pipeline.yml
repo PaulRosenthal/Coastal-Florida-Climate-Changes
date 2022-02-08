@@ -35,6 +35,7 @@ jobs:
     - name: Run RSpec Tests 
       run: bundle install && rspec spec --format documentation --out rspec_tests_output.txt
     - name: Upload RSpec Tests Results
+      if: always()
       uses: actions/upload-artifact@v2
       with:
         name: rspec_tests_results
