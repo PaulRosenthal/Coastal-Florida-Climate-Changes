@@ -15,4 +15,10 @@ description: See how changing sea levels impact Destin and what its future holds
 
 {% include sea-level-map.html longitude="-86.462133" latitude="30.385179" %}
 
+## Impacts of Sea Level Change in Destin
+
+Learn more about anticipated human, financial, and other impacts as a result of sea level changes in Okaloosa County using NOAA's Coastal County Snapshots tool:
+
+<a href="https://coast.noaa.gov/snapshots/#&state=eyJmaXBzIjoiMTIwOTEiLCJpc1RoZW1lRGFyayI6dHJ1ZSwiYmFzZW1hcCI6ImRhcmsifQ=="> <img src="/downloads/destin/NOAA-Coastal-County-Snapshots-Okaloosa.png" alt="NOAA Coastal County Snapshots: Okaloosa" class="preview-image"/></a>
+
 {% include resources.md map_location_statement="While the map on this page is useful for helping visualize what sea level rise looks like in your area of interest, there are many other great resources available." %}
