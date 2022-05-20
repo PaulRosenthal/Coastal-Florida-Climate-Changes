@@ -30,7 +30,7 @@ jobs:
     - name: Prepare Environment to Run Tests
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.6
+        ruby-version: 3.1.2
         bundler-cache: false
     - name: Run RSpec Tests 
       run: bundle install && rspec spec --format documentation --out rspec_tests_output.txt
