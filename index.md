@@ -18,7 +18,7 @@ I have developed an Alexa Skill that provides the current status of Panama City 
 
 To use it, simply say "Alexa, enable Panama City Beach Safety Flags." Then, any time you'd like to hear the current flag status, just say "Alexa, Panama City Beach Flags."
 
-<a href="https://www.amazon.com/dp/B0B1M6ZC75?ref&ref=cm_sw_em_r_as_dp_UNqfq3K6RDMoO"><img src="/img/just-ask-alexa-skill-image.png" alt="Just Ask Alexa - Panama City Beach Flags Safety Skill" style="margin-left:auto;margin-right:auto"></a>
+<a href="https://www.amazon.com/dp/B0B1M6ZC75?ref&ref=cm_sw_em_r_as_dp_UNqfq3K6RDMoO"><img src="/img/just-ask-alexa-skill-image.png" alt="Just Ask Alexa - Panama City Beach Flags Safety Skill" class="center"></a>
 
 ## Northwest Florida Coastal Communities
 
