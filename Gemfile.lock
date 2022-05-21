@@ -312,7 +312,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
-  github-pages (>= 225)
+  github-pages (>= 226)
   jekyll-sitemap
   rack
   rspec
