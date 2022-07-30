@@ -1,7 +1,6 @@
 title: Sea Florida Change
 description: Visualize sea level changes and see what the future holds in northwest Florida's coastal areas.
 theme: jekyll-theme-cayman
-google_analytics: G-5XSYFHL176
 url: "https://seaflchange.org"
 plugins:
   - jekyll-sitemap
