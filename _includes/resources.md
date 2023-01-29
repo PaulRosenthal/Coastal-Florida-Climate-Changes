@@ -9,3 +9,4 @@
 - [Hurricane Risk By County](https://www.arcgis.com/apps/Cascade/index.html?appid=8f6013fdba6445e9a8732ff6cab9cd1a)
 - Ward Law reached out to provide their [hurricane preparedness guide](https://www.855dolor55.com/en/hurricane-guide/) as a practical tool for steps to take when preparing for a hurricane
 - The Mesothelioma Center sent me their [Asbestos and Natural Disasters Guide](https://www.asbestos.com/asbestos/natural-disasters/) containing information about asbestos and the complexities it adds to hurricane prevention and response
+- Annuity.org shared [The Ultimate Guide to Disaster Preparedness For Your Finances](https://www.annuity.org/financial-literacy/disaster-preparedness/) with information about preparing for hurricane impacts and recovering from them
