@@ -12,7 +12,7 @@ jobs:
     - name: Jekyll Deploy Test
       uses: PaulRosenthal/Jekyll-Deploy-Test-Action@v2
     - name: Upload _site Directory From Test Build
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: test_site_directory
         path: _site
