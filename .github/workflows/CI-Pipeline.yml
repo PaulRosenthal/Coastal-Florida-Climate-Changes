@@ -8,9 +8,9 @@ jobs:
     name: Jekyll Deployment Test
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - name: Jekyll Deploy Test
-      uses: PaulRosenthal/Jekyll-Deploy-Test-Action@v2
+      uses: PaulRosenthal/Jekyll-Deploy-Test-Action@v3
     - name: Upload _site Directory From Test Build
       uses: actions/upload-artifact@v2
       with:
@@ -22,11 +22,11 @@ jobs:
     name: Execute RSpec Tests
     steps:
     - name: Download _site Directory From Test Build
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v3
       with:
         name: test_site_directory
     - name: Checkout Repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - name: Prepare Environment to Run Tests
       uses: ruby/setup-ruby@v1
       with:
@@ -36,7 +36,7 @@ jobs:
       run: bundle install && rspec spec --format documentation --out rspec_tests_output.txt
     - name: Upload RSpec Tests Results
       if: always()
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: rspec_tests_results
         path: rspec_tests_output.txt
