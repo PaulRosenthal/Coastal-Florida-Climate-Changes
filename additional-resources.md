@@ -5,9 +5,13 @@ tagline: Explore Further
 description: Explore additional resources to help visualize sea level changes and impacts to areas you care about.
 ---
 
+## 2023 Hurricane Outlook Now Available
+
+WeatherTiger has released its [April, 2023 outlook](https://weathertiger.substack.com/p/atlantic-hurricane-season-first-look-b6e) for the upcoming hurricane season. This year, changes in the El Niño-Southern Oscillation (ENSO) from La Niña to neutral or El Niño could result in a lower hurricane potential than the previous three years.
+
 ## Tropical Storm and Hurricane Predictions
 
-Interested in learning about the likelihood your area of interest will be impacted by a tropical storm or hurricane this year? This [resource from Colorado State University](https://tropical.colostate.edu/resources.html) is a great place to get started.
+In addition to the outlook above, this [resource from Colorado State University](https://tropical.colostate.edu/resources.html) is a great place to learn about hurricane predictions for a specific area of interest.
 
 ## What is Happening Now?
 
