@@ -6,8 +6,7 @@ on:
 
 jobs:
   Google_Cloud_Deploy:
-
-    # Add "id-token" with the intended permissions.
+    runs-on: ubuntu-latest
     permissions:
       contents: 'read'
       id-token: 'write'
