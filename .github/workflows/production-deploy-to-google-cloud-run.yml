@@ -14,14 +14,13 @@ jobs:
     steps:
     - uses: 'actions/checkout@v3'
 
-    - id: Authenticate to Google Cloud Platform
-      name: 'Authenticate to Google Cloud'
+    - name: 'Authenticate to Google Cloud'
       uses: 'google-github-actions/auth@v1'
       with:
         service_account: ${{ secrets.GCP_EMAIL }}
         credentials_json: ${{ secrets.GCP_CREDENTIALS }} 
         
-    - id: Deploy to Google Cloud Run
+    - name: Deploy to Google Cloud Run
       uses: 'google-github-actions/deploy-cloudrun@v1'
       with:
         service: 'sea-florida-change-website-production'
