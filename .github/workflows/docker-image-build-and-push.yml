@@ -36,7 +36,7 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
   
-   Google_Cloud_Deploy: 
+  Google_Cloud_Deploy: 
      needs: push_to_registry
      runs-on: ubuntu-latest 
      permissions: 
