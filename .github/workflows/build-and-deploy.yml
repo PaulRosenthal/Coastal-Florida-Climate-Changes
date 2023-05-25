@@ -35,3 +35,26 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+  
+  Google_Cloud_Deploy: 
+     needs: push_to_registry
+     runs-on: ubuntu-latest 
+     permissions: 
+       contents: 'read' 
+       id-token: 'write' 
+  
+     steps: 
+     - uses: 'actions/checkout@v3' 
+  
+     - name: 'Authenticate to Google Cloud' 
+       uses: 'google-github-actions/auth@v1' 
+       with: 
+         credentials_json: ${{ secrets.GCP_CREDENTIALS }}  
+  
+     - name: 'Set up Cloud SDK' 
+       uses: 'google-github-actions/setup-gcloud@v1' 
+       with: 
+         version: '>= 363.0.0' 
+  
+     - name: 'Execute Deploy' 
+       run: 'gcloud config set run/region us-central1 && gcloud run deploy sea-florida-change-website-production --image=index.docker.io/paulrosenthal/sea-florida-change-website:main --region=us-central1 --project=sea-florida-change && gcloud run services update-traffic sea-florida-change-website-production --to-latest'
