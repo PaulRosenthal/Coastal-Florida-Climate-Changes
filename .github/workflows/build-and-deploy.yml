@@ -1,11 +1,11 @@
-name: Publish Docker image
+name: Build and Publish Containerized Version of Website
 
 on:
   push:
     branches: [ "test-environment", "main" ]
 
 jobs:
-  push_to_registy:
+  Build_and_Push_to_Docker_Hub:
     name: Build Docker image and push it to Docker Hub
     runs-on: ubuntu-latest
     permissions:
@@ -37,7 +37,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
   
   Google_Cloud_Deploy: 
-     needs: push_to_registry
+     needs: Build_and_Push_to_Docker_Hub
      runs-on: ubuntu-latest 
      permissions: 
        contents: 'read' 
