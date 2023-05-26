@@ -2,7 +2,7 @@ name: Build and Publish Containerized Version of Website
 
 on:
   push:
-    branches: [ "test", "main" ]
+    branches: [ "main" ]
 
 jobs:
   Build_and_Push_to_Docker_Hub:
@@ -55,11 +55,6 @@ jobs:
        uses: 'google-github-actions/setup-gcloud@v1' 
        with: 
          version: '>= 363.0.0' 
-  
-     - name: 'Execute Deploy to Test Environment'
-       if: github.ref == '/refs/heads/test'
-       run: 'gcloud config set run/region us-central1 && gcloud run deploy sea-florida-change-website-test --image=index.docker.io/paulrosenthal/sea-florida-change-website:test --region=us-central1 --project=sea-florida-change && gcloud run services update-traffic sea-florida-change-website-test --to-latest'
 
      - name: 'Execute Deploy to Production Environment'
-       if: github.ref == '/refs/heads/main'
        run: 'gcloud config set run/region us-central1 && gcloud run deploy sea-florida-change-website-production --image=index.docker.io/paulrosenthal/sea-florida-change-website:main --region=us-central1 --project=sea-florida-change && gcloud run services update-traffic sea-florida-change-website-production --to-latest'
