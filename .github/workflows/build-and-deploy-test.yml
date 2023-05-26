@@ -1,10 +1,10 @@
 name: Build and Publish Containerized Version of Website 
   
- on: 
-   push: 
-     branches: [ "test" ] 
+on:
+  push: 
+    branches: [ "test" ] 
   
- jobs: 
+jobs:
    Build_and_Push_to_Docker_Hub: 
      name: Build Docker image and push it to Docker Hub 
      runs-on: ubuntu-latest 
