@@ -1,4 +1,4 @@
-name: Build and Publish Containerized Version of Website 
+name: Build and Publish Containerized Version of Website - Test Environment
   
 on:
   push: 
@@ -32,6 +32,7 @@ jobs:
          uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671 
          with: 
            context: . 
+           file: ./Dockerfile.test
            push: true 
            tags: ${{ steps.meta.outputs.tags }} 
            labels: ${{ steps.meta.outputs.labels }} 
