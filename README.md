@@ -11,7 +11,9 @@ There are two environments associated with this project. The first is the produc
 The badges below show the status of the most recent continuous integration pipeline runs (used to ensure source code changes do not induce website deployment failures and pass a series of RSpec tests) and test environment build:
 
 [![Continuous Integration Testing Pipeline](https://github.com/PaulRosenthal/Coastal-Florida-Climate-Changes/actions/workflows/CI-Pipeline.yml/badge.svg)](https://github.com/PaulRosenthal/Coastal-Florida-Climate-Changes/actions/workflows/CI-Pipeline.yml)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/86f3f288-26f7-492b-96a2-fe86728b72c0/deploy-status)](https://app.netlify.com/sites/coastal-florida-climate-changes/deploys)
+[![Build and Deploy Pipeline - Test](https://github.com/PaulRosenthal/Coastal-Florida-Climate-Changes/actions/workflows/build-and-deploy-test.yml/badge.svg)](https://github.com/PaulRosenthal/Coastal-Florida-Climate-Changes/actions/workflows/build-and-deploy-test.yml)
+[![Build and Deploy Pipeline - Production](https://github.com/PaulRosenthal/Coastal-Florida-Climate-Changes/actions/workflows/build-and-deploy-production.yml/badge.svg)](https://github.com/PaulRosenthal/Coastal-Florida-Climate-Changes/actions/workflows/build-and-deploy-production.yml)
+
 
 ## Feedback or Contributions
 

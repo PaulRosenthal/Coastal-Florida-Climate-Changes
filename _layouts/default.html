@@ -38,6 +38,10 @@
   </head>
   <body>
 
+{% if jekyll.environment == "test" %}
+<b>This is the test environment for the Sea Florida Change website. The production version is located <a href="https://SeaFLChange.org/">here</a>.</b> 
+{% endif %}
+
     <header class="page-header" role="banner">
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ page.tagline | default: page.description | default: site.description }}</h2>
