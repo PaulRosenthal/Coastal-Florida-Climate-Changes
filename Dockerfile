@@ -36,5 +36,5 @@ COPY --from=jekyll-website-build  /build-directory/_site /usr/share/nginx/html
 # Finally, the the main nginx.conf file is transferred to
 # /etc/nginx.conf.d/nginx.conf. The Sea Florida Change
 # server configuration is transferred to /etc/nginx/conf.d/seaflchange.org.conf.
+COPY /nginx.conf /etc/nginx/nginx.conf
 COPY /seaflchange.org.conf /etc/nginx/conf.d/seaflchange.org.conf
-COPY /nginx.conf /etc/nginx/conf/nginx.conf
