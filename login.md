@@ -83,6 +83,7 @@ description: Visualize sea level changes and see what the future holds in northw
     
     auth.createUserWithEmailAndPassword(email.value, password.value)
     .then((userCredential) => {
+      firebase.auth().currentUser.sendEmailVerification()
       location.reload();
       // Signed in 
       var user = userCredential.user;
