@@ -8,6 +8,25 @@ description: Visualize sea level changes and see what the future holds in northw
 
 <img src="/img/logo_transparent.png" alt="Sea Florida Change Logo" style="height:200px;width:200px;margin-left:auto;margin-right:auto;display:block">
 
+   <!-- Firebase Authentication Initialization -->
+   <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+    // Firebase configuration:
+    const firebaseConfig = {
+      apiKey: "AIzaSyChrzz2VbgRyC7N06oNkLbu-U9qdVNeBuY",
+      authDomain: "sea-florida-change.firebaseapp.com",
+      databaseURL: "https://sea-florida-change-default-rtdb.firebaseio.com",
+      projectId: "sea-florida-change",
+      storageBucket: "sea-florida-change.appspot.com",
+      messagingSenderId: "323384256569",
+      appId: "1:323384256569:web:35605987bc4113b7dcc5e8"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
+  
 <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
 
