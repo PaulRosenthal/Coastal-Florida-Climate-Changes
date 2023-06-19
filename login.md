@@ -7,212 +7,151 @@ description: Visualize sea level changes and see what the future holds in northw
 ---
 
 <img src="/img/logo_transparent.png" alt="Sea Florida Change Logo" style="height:200px;width:200px;margin-left:auto;margin-right:auto;display:block">
-
-   <!-- Firebase Authentication Initialization -->
-   <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
-    // Firebase configuration:
-    const firebaseConfig = {
-      apiKey: "AIzaSyChrzz2VbgRyC7N06oNkLbu-U9qdVNeBuY",
-      authDomain: "sea-florida-change.firebaseapp.com",
-      databaseURL: "https://sea-florida-change-default-rtdb.firebaseio.com",
-      projectId: "sea-florida-change",
-      storageBucket: "sea-florida-change.appspot.com",
-      messagingSenderId: "323384256569",
-      appId: "1:323384256569:web:35605987bc4113b7dcc5e8"
-    };
   
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-  </script>
-  
-<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
-
-   <script type="text/javascript">
-
-    /**
-     * Handles the sign in button press.
-     */
-    function toggleSignIn() {
-      if (firebase.auth().currentUser) {
-        firebase.auth().signOut();
-      } else {
-        var email = document.getElementById('email').value;
-        var password = document.getElementById('password').value;
-        if (email.length < 4) {
-          alert('Please enter an email address.');
-          return;
-        }
-        if (password.length < 4) {
-          alert('Please enter a password.');
-          return;
-        }
-        // Sign in with email and pass.
-        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-          // Handle Errors here.
-          var errorCode = error.code;
-          var errorMessage = error.message;
-          if (errorCode === 'auth/wrong-password') {
-            alert('Wrong password.');
-          } else {
-            alert(errorMessage);
-          }
-          console.log(error);
-          document.getElementById('quickstart-sign-in').disabled = false;
-        });
-      }
-      document.getElementById('quickstart-sign-in').disabled = true;
-    }
-
-    /**
-     * Handles the sign up button press.
-     */
-    function handleSignUp() {
-      var email = document.getElementById('email').value;
-      var password = document.getElementById('password').value;
-      if (email.length < 4) {
-        alert('Please enter an email address.');
-        return;
-      }
-      if (password.length < 4) {
-        alert('Please enter a password.');
-        return;
-      }
-      // Create user with email and pass.
-      firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        if (errorCode == 'auth/weak-password') {
-          alert('The password is too weak.');
-        } else {
-          alert(errorMessage);
-        }
-        console.log(error);
-      });
-    }
-
-    /**
-     * Sends an email verification to the user.
-     */
-    function sendEmailVerification() {
-      firebase.auth().currentUser.sendEmailVerification().then(function() {
-        // Email Verification sent!
-        alert('Email Verification Sent!');
-      });
-    }
-
-    function sendPasswordReset() {
-      var email = document.getElementById('email').value;
-      firebase.auth().sendPasswordResetEmail(email).then(function() {
-        // Password Reset Email Sent!
-        alert('Password Reset Email Sent!');
-      }).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        if (errorCode == 'auth/invalid-email') {
-          alert(errorMessage);
-        } else if (errorCode == 'auth/user-not-found') {
-          alert(errorMessage);
-        }
-        console.log(error);
-      });
-    }
-
-    /**
-     * initApp handles setting up UI event listeners and registering Firebase auth listeners:
-     *  - firebase.auth().onAuthStateChanged: This listener is called when the user is signed in or
-     *    out, and that is where we update the UI.
-     */
-    function initApp() {
-      // Listening for auth state changes.
-      firebase.auth().onAuthStateChanged(function(user) {
-        document.getElementById('quickstart-verify-email').disabled = true;
-        if (user) {
-          // User is signed in.
-          var displayName = user.displayName;
-          var email = user.email;
-          var emailVerified = user.emailVerified;
-          var photoURL = user.photoURL;
-          var isAnonymous = user.isAnonymous;
-          var uid = user.uid;
-          var providerData = user.providerData;
-          document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
-          document.getElementById('quickstart-sign-in').textContent = 'Sign out';
-          document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
-          if (!emailVerified) {
-            document.getElementById('quickstart-verify-email').disabled = false;
-          }
-        } else {
-          // User is signed out.
-          document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
-          document.getElementById('quickstart-sign-in').textContent = 'Sign in';
-          document.getElementById('quickstart-account-details').textContent = 'null';
-        }
-        document.getElementById('quickstart-sign-in').disabled = false;
-      });
-
-      document.getElementById('quickstart-sign-in').addEventListener('click', toggleSignIn, false);
-      document.getElementById('quickstart-sign-up').addEventListener('click', handleSignUp, false);
-      document.getElementById('quickstart-verify-email').addEventListener('click', sendEmailVerification, false);
-      document.getElementById('quickstart-password-reset').addEventListener('click', sendPasswordReset, false);
-    }
-
-    window.onload = function() {
-      initApp();
-    };
-  </script>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+  <title>JS Auth</title>
 </head>
 <body>
-<div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  
+<form>
+  <h3 class="text-center">Registration / Login Form</h3>
+  <!-- Email input -->
+  <div class="form-outline mb-4">
+    <input type="email" id="inputEmail" class="form-control" />
+    <label class="form-label" for="form2Example1">Email address</label>
+  </div>
 
-  <!-- Header section containing title -->
-  <header class="mdl-layout__header mdl-color-text--white mdl-color--light-blue-700">
-    <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
-      <div class="mdl-layout__header-row mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--8-col-desktop">
-        <a href="/"><h3>Firebase Authentication</h3></a>
-      </div>
+  <!-- Password input -->
+  <div class="form-outline mb-2">
+    <input type="password" id="inputPassword" class="form-control" />
+    <label class="form-label" for="form2Example2">Password</label>
+  </div>
+
+  <!-- 2 column grid layout for inline styling -->
+  <div class="row mb-4">
+    <div class="col d-flex justify-content-center">
+    
     </div>
-  </header>
+  </div>
 
-  <main class="mdl-layout__content mdl-color--grey-100">
-    <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
+  <!-- Submit button -->
+  <button type="submit" class="btn btn-primary btn-block mb-4" id="signin">Sign in</button>
+  <button type="submit" class="btn btn-primary btn-block mb-4" id="signup">Sign Up</button>
+  </div>
+</form>
 
-      <!-- Container for the demo -->
-      <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-desktop">
-        <div class="mdl-card__title mdl-color--light-blue-600 mdl-color-text--white">
-          <h2 class="mdl-card__title-text">Firebase Email &amp; Password Authentication</h2>
-        </div>
-        <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-          <p>Enter an email and password below and either sign in to an existing account or sign up</p>
+<h4 id="user">Welcome user: </h4>
 
-          <input class="mdl-textfield__input" style="display:inline;width:auto;" type="text" id="email" name="email" placeholder="Email"/>
-          &nbsp;&nbsp;&nbsp;
-          <input class="mdl-textfield__input" style="display:inline;width:auto;" type="password" id="password" name="password" placeholder="Password"/>
-          <br/><br/>
-          <button disabled class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in" name="signin">Sign In</button>
-          &nbsp;&nbsp;&nbsp;
-          <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-up" name="signup">Sign Up</button>
-          &nbsp;&nbsp;&nbsp;
-          <button class="mdl-button mdl-js-button mdl-button--raised" disabled id="quickstart-verify-email" name="verify-email">Send Email Verification</button>
-          &nbsp;&nbsp;&nbsp;
-          <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-password-reset" name="verify-email">Send Password Reset Email</button>
+  <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+  <script>
+    var firebaseConfig = {
+    apiKey: "AIzaSyChrzz2VbgRyC7N06oNkLbu-U9qdVNeBuY",
+    authDomain: "sea-florida-change.firebaseapp.com",
+    databaseURL: "https://sea-florida-change-default-rtdb.firebaseio.com",
+    projectId: "sea-florida-change",
+    storageBucket: "sea-florida-change.appspot.com",
+    messagingSenderId: "323384256569",
+    appId: "1:323384256569:web:35605987bc4113b7dcc5e8"
+  };
+  //Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 
-          <!-- Container where we'll display the user details -->
-          <div class="quickstart-user-details-container">
-            Firebase sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
-            <div>Firebase auth <code>currentUser</code> object value:</div>
-            <pre><code id="quickstart-account-details">null</code></pre>
-          </div>
-        </div>
-      </div>
+  const auth = firebase.auth()
 
-    </div>
-  </main>
-</div>
+
+  //Signup Function
+  let signUpButton = document.getElementById('signup')
+  signUpButton.addEventListener("click", (e) => {
+    //Prevent Default Form Submission Behavior
+    e.preventDefault()
+    console.log("clicked")
+
+    var email = document.getElementById("inputEmail")
+    var password = document.getElementById("inputPassword")
+    
+    auth.createUserWithEmailAndPassword(email.value, password.value)
+    .then((userCredential) => {
+      location.reload();
+      // Signed in 
+      var user = userCredential.user;
+      console.log("user",user.email)
+    })
+    .catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log("error code", errorCode)
+      console.log("error Message", errorMessage)
+    });
+  })
+
+
+
+
+
+
+
+
+  let signInButton = document.getElementById('signin')
+  signInButton.addEventListener("click", (e) => {
+    //Prevent Default Form Submission Behavior
+    e.preventDefault()
+    console.log("clicked")
+
+    var email = document.getElementById("inputEmail")
+    var password = document.getElementById("inputPassword")
+
+    auth.signInWithEmailAndPassword(email.value, password.value) 
+    .then((userCredential) => {
+      // location.reload();
+      // Signed in 
+      var user = userCredential.user;
+      console.log("user",user.email)
+      window.location = "dash.html";
+    })
+    .catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // alert("error code", errorCode)
+      alert( errorMessage)
+    });
+   })
+
+
+
+//This method gets invoked in the UI when there are changes in the authentication state:
+// 1). Right after the listener has been registered
+// 2). When a user is signed in
+// 3). When the current user is signed out
+// 4). When the current user changes
+
+//Lifecycle hooks
+auth.onAuthStateChanged(function(user) {
+  if (user) {
+
+    var email = user.email
+  
+    var users = document.getElementById("user")
+    var text = document.createTextNode(email);
+
+    users.appendChild(text);
+
+    console.log(users)
+    //is signed in
+  } else {
+    //no user signed in
+  }
+})
+</script>
 </body>
-
-
