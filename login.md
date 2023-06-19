@@ -10,7 +10,7 @@ description: Visualize sea level changes and see what the future holds in northw
 
 ## Test Signup Form
 
- <script>
+ <script type="module">
  import { getAuth } from 'https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js'
  const auth = getAuth();
 createUserWithEmailAndPassword(auth, email, password)
