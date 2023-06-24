@@ -7,152 +7,132 @@ description: Visualize sea level changes and see what the future holds in northw
 ---
 
 <img src="/img/logo_transparent.png" alt="Sea Florida Change Logo" style="height:200px;width:200px;margin-left:auto;margin-right:auto;display:block">
-  
+
  <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <!-- Font Awesome -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-<!-- Google Fonts -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-<!-- Bootstrap core CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-<!-- Material Design Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-<link rel="stylesheet" href="style.css" />
-  <title>JS Auth</title>
-</head>
-<body>
-  
-<form>
-  <h3 class="text-center">Registration / Login Form</h3>
-  <!-- Email input -->
-  <div class="form-outline mb-4">
-    <input type="email" id="inputEmail" class="form-control" />
-    <label class="form-label" for="form2Example1">Email address</label>
-  </div>
-
-  <!-- Password input -->
-  <div class="form-outline mb-2">
-    <input type="password" id="inputPassword" class="form-control" />
-    <label class="form-label" for="form2Example2">Password</label>
-  </div>
-
-  <!-- 2 column grid layout for inline styling -->
-  <div class="row mb-4">
-    <div class="col d-flex justify-content-center">
-    
-    </div>
-  </div>
-
-  <!-- Submit button -->
-  <button type="submit" class="btn btn-primary btn-block mb-4" id="signin">Sign in</button>
-  <button type="submit" class="btn btn-primary btn-block mb-4" id="signup">Sign Up</button>
-  </div>
-</form>
-
-<h4 id="user">Welcome user: </h4>
-
-  <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1"></script>
   <script>
-    var firebaseConfig = {
-    apiKey: "AIzaSyChrzz2VbgRyC7N06oNkLbu-U9qdVNeBuY",
-    authDomain: "sea-florida-change.firebaseapp.com",
-    databaseURL: "https://sea-florida-change-default-rtdb.firebaseio.com",
-    projectId: "sea-florida-change",
-    storageBucket: "sea-florida-change.appspot.com",
-    messagingSenderId: "323384256569",
-    appId: "1:323384256569:web:35605987bc4113b7dcc5e8"
-  };
-  //Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+var SUPABASE_URL = 'https://zexltivbujgutoeekosn.supabase.co'
+var SUPABASE_KEY =
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpleGx0aXZidWpndXRvZWVrb3NuIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODc1NjY1MjksImV4cCI6MjAwMzE0MjUyOX0.Rv9EP8U0LWKM9qbxNzwafk-s91HftqesRziil_jX-5U'
 
-  const auth = firebase.auth()
+var supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY)
+window.userToken = null
 
+document.addEventListener('DOMContentLoaded', function (event) {
+  var signUpForm = document.querySelector('#sign-up')
+  signUpForm.onsubmit = signUpSubmitted.bind(signUpForm)
 
-  //Signup Function
-  let signUpButton = document.getElementById('signup')
-  signUpButton.addEventListener("click", (e) => {
-    //Prevent Default Form Submission Behavior
-    e.preventDefault()
-    console.log("clicked")
+  var logInForm = document.querySelector('#log-in')
+  logInForm.onsubmit = logInSubmitted.bind(logInForm)
 
-    var email = document.getElementById("inputEmail")
-    var password = document.getElementById("inputPassword")
-    
-    auth.createUserWithEmailAndPassword(email.value, password.value)
-    .then((userCredential) => {
-      firebase.auth().currentUser.sendEmailVerification()
-      location.reload();
-      // Signed in 
-      var user = userCredential.user;
-      console.log("user",user.email)
-    })
-    .catch((error) => {
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      console.log("error code", errorCode)
-      console.log("error Message", errorMessage)
-    });
-  })
+  var userDetailsButton = document.querySelector('#user-button')
+  userDetailsButton.onclick = fetchUserDetails.bind(userDetailsButton)
 
-
-
-
-
-
-
-
-  let signInButton = document.getElementById('signin')
-  signInButton.addEventListener("click", (e) => {
-    //Prevent Default Form Submission Behavior
-    e.preventDefault()
-    console.log("clicked")
-
-    var email = document.getElementById("inputEmail")
-    var password = document.getElementById("inputPassword")
-
-    auth.signInWithEmailAndPassword(email.value, password.value) 
-    .then((userCredential) => {
-      // location.reload();
-      // Signed in 
-      var user = userCredential.user;
-      console.log("user",user.email)
-      window.location = "dash.html";
-    })
-    .catch((error) => {
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      // alert("error code", errorCode)
-      alert( errorMessage)
-    });
-   })
-
-
-
-//This method gets invoked in the UI when there are changes in the authentication state:
-// 1). Right after the listener has been registered
-// 2). When a user is signed in
-// 3). When the current user is signed out
-// 4). When the current user changes
-
-//Lifecycle hooks
-auth.onAuthStateChanged(function(user) {
-  if (user) {
-
-    var email = user.email
-  
-    var users = document.getElementById("user")
-    var text = document.createTextNode(email);
-
-    users.appendChild(text);
-
-    console.log(users)
-    //is signed in
-  } else {
-    //no user signed in
-  }
+  var logoutButton = document.querySelector('#logout-button')
+  logoutButton.onclick = logoutSubmitted.bind(logoutButton)
 })
+
+const signUpSubmitted = (event) => {
+  event.preventDefault()
+  const email = event.target[0].value
+  const password = event.target[1].value
+
+  supabase.auth
+    .signUp({ email, password })
+    .then((response) => {
+      response.error ? alert(response.error.message) : setToken(response)
+    })
+    .catch((err) => {
+      alert(err)
+    })
+}
+
+const logInSubmitted = (event) => {
+  event.preventDefault()
+  const email = event.target[0].value
+  const password = event.target[1].value
+
+  supabase.auth
+    .signIn({ email, password })
+    .then((response) => {
+      response.error ? alert(response.error.message) : setToken(response)
+    })
+    .catch((err) => {
+      alert(err.response.text)
+    })
+}
+
+const fetchUserDetails = () => {
+  alert(JSON.stringify(supabase.auth.user()))
+}
+
+const logoutSubmitted = (event) => {
+  event.preventDefault()
+
+  supabase.auth
+    .signOut()
+    .then((_response) => {
+      document.querySelector('#access-token').value = ''
+      document.querySelector('#refresh-token').value = ''
+      alert('Logout successful')
+    })
+    .catch((err) => {
+      alert(err.response.text)
+    })
+}
+
+function setToken(response) {
+  if (response.user.confirmation_sent_at && !response?.session?.access_token) {
+    alert('Confirmation Email Sent')
+  } else {
+    document.querySelector('#access-token').value = response.session.access_token
+    document.querySelector('#refresh-token').value = response.session.refresh_token
+    alert('Logged in as ' + response.user.email)
+  }
+}
 </script>
+</head>
+
+ <body>
+    <div class='container'>
+        <div class='section'>
+            <h1>Supabase Auth Example</h1>
+        </div>
+        <div class='section'>
+            <a href="https://github.com/supabase/supabase/tree/master/examples/auth/javascript-auth">View the code on GitHub</a>
+        </div>
+        <div class='section'>
+            <form id='sign-up'>
+                <h3>Sign Up</h3>
+                <label>Email</label><input type='email' name='email' />
+                <label>Password</label><input type='password' name='password' />
+                <input type='submit'>
+            </form>
+        </div>
+        <div class='section'>
+            <form id='log-in'>
+                <h3>Log In</h3>
+                <label>Email</label><input type='email' name='email' />
+                <label>Password</label><input type='password' name='password' />
+                <input type='submit'>
+            </form>
+        </div>
+        <div class='section'>
+            <form id='validate'>
+                <h3>Access Token</h3>
+                <input readonly=readonly type='text' id='access-token' /> <small>Default expiry is 60 minutes</small>
+                <h3>Refresh Token</h3>
+                <input readonly=readonly type='text' id='refresh-token' /> <small>Supabase-js will use this to automatically fetch a new accessToken for you every 60 mins whilst the client is running</small> 
+            </form>
+        </div>
+        <div class='section'>
+            <h3>Fetch User Details</h3>
+            <button id='user-button'>Fetch</button>
+        </div>
+        <div class='section'>
+            <h3>Logout</h3>
+            <button id='logout-button'>Logout</button>
+        </div>
+    </div>
 </body>
