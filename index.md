@@ -12,17 +12,13 @@ description: Visualize sea level changes and see what the future holds in northw
 
 This website has been created to help visualize the potential impacts sea level changes will have on the coastal areas of northwest Florida and as a resource to learn more about the projections for specific communities. The data on this website can be used to put more global changes into perspective, and see what the future might look like under various climate scenarios. Sea level rise and flood risk are both important factors that will define how significant changes are.
 
-## 2023 Hurricane Outlook Now Available
-
-WeatherTiger has released its [April, 2023 outlook](https://weathertiger.substack.com/p/atlantic-hurricane-season-first-look-b6e) for the upcoming hurricane season. This year, changes in the El Niño-Southern Oscillation (ENSO) from La Niña to neutral or El Niño could result in a lower hurricane potential than the previous three years.
-
 ## Beach Flag Status Through Alexa
 
-I have developed an Alexa Skill that provides the current status of Panama City Beach's safety flags.
-
-To use it, simply say "Alexa, enable Panama City Beach Safety Flags." Then, any time you'd like to hear the current flag status, just say "Alexa, Panama City Beach Flags."
-
 <a href="https://www.amazon.com/dp/B0B1M6ZC75?ref&ref=cm_sw_em_r_as_dp_UNqfq3K6RDMoO"><img src="/img/just-ask-alexa-skill-image.png" alt="Just Ask Alexa - Panama City Beach Flags Safety Skill" class="center"></a>
+
+I developed two Alexas Skill that provide a current status of the beach safety flags in Panama City Beach and Walton County.
+
+To use it, simply say "Alexa, enable Panama City Beach Safety Flags" or "Alexa, enable South Walton Beach Flags." Then, any time you'd like to hear the current flag status, just say "Alexa, Panama City Beach Flags" or "Alexa, South Walton Beach Flags."
 
 ## Northwest Florida Coastal Communities
 
