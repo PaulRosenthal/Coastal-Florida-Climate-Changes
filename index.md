@@ -16,9 +16,9 @@ This website has been created to help visualize the potential impacts sea level 
 
 <a href="https://www.amazon.com/dp/B0B1M6ZC75?ref&ref=cm_sw_em_r_as_dp_UNqfq3K6RDMoO"><img src="/img/just-ask-alexa-skill-image.png" alt="Just Ask Alexa - Panama City Beach Flags Safety Skill" class="center"></a>
 
-I developed two Alexas Skill that provide a current status of the beach safety flags in Panama City Beach and Walton County.
+I developed two Alexa skills that provide a current status of the beach safety flags in Panama City Beach and Walton County, Florida.
 
-To use it, simply say "Alexa, enable Panama City Beach Safety Flags" or "Alexa, enable South Walton Beach Flags." Then, any time you'd like to hear the current flag status, just say "Alexa, Panama City Beach Flags" or "Alexa, South Walton Beach Flags."
+To enable either skill, simply say "Alexa, enable Panama City Beach Safety Flags" or "Alexa, enable South Walton Beach Flags." Then, any time you'd like to hear the current flag status, just say "Alexa, Panama City Beach Flags" or "Alexa, South Walton Beach Flags."
 
 ## Northwest Florida Coastal Communities
 
