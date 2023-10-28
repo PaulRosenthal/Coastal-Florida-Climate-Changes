@@ -81,7 +81,7 @@
 
   @include small {
     width: 200%;
-    transform: translate(-40%, -3%);
+    z-index: 1;
   }
 }
 
