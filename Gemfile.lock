@@ -160,7 +160,6 @@ DEPENDENCIES
   jekyll-sitemap
   rack
   rspec
-  sass-embedded
 
 BUNDLED WITH
    2.5.6
