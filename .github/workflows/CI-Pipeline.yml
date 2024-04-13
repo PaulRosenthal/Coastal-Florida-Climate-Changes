@@ -10,7 +10,7 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v3
     - name: Jekyll Deploy Test
-      uses: PaulRosenthal/Jekyll-Deploy-Test-Action@v2
+      uses: PaulRosenthal/Jekyll-Deploy-Test-Action@test
     - name: Upload _site Directory From Test Build
       uses: actions/upload-artifact@v3
       with:
