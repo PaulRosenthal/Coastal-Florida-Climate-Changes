@@ -52,6 +52,8 @@
  # They are transferred to /usr/share/nginx/html and /usr/share/nginx/html/flag_status_viewer: 
  COPY --from=jekyll-website-build  /build-directory/_site /usr/share/nginx/html
  COPY --from=flag_status_viewer_builder /flag-status-viewer/build /usr/share/nginx/html/flag_status_viewer
+
+ RUN cd /usr/share/nginx/html/flag_status_viewer && ls
   
 # Finally, the the main nginx.conf file is transferred to
 # /etc/nginx.conf.d/nginx.conf. The Sea Florida Change
