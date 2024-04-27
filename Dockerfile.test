@@ -24,6 +24,25 @@
  # Set environment build variables and create the static website content: 
  ENV JEKYLL_ENV=test 
  RUN bundle exec jekyll build 
+
+ # An alpine container is created to build the flag status viewer:
+ FROM node:alpine AS flag_status_viewer_builder
+
+ # Set the working directory:
+ WORKDIR /flag-status-viewer
+
+ # Copy the package.json and package-lock.json files:
+ COPY /flag_status_viewer/package*.json ./
+
+ # Install npm dependencies:
+ RUN npm install
+
+ # Copy the remaining files:
+ COPY ./flag_status_viewer .
+
+ # Build the flag status viewer application:
+ RUN npm run build
+
   
  # An nginx container is created to serve the website: 
  FROM nginx 
