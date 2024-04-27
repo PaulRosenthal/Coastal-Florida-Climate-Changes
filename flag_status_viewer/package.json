@@ -1,5 +1,6 @@
 {
   "name": "emerald-coast-beach-flags",
+  "homepage": "https://test.seaflchange.org/flag-status-viewer",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
