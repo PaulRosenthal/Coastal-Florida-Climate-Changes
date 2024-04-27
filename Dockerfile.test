@@ -43,6 +43,9 @@
  # Build the flag status viewer application:
  RUN npm run build
 
+ # Run echo:
+ RUN echo "Hello, World!"
+
   
  # An nginx container is created to serve the website: 
  FROM nginx 
