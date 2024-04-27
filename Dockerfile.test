@@ -43,17 +43,15 @@
  # Build the flag status viewer application:
  RUN npm run build
 
- # Run echo:
- RUN echo "Hello, World!"
-
   
  # An nginx container is created to serve the website: 
  FROM nginx 
   
  # The website files now reside in /build-directory/_site in the 
- # jekyll-website-build container. They are transferred to 
- # /usr/share/nginx/html: 
- COPY --from=jekyll-website-build  /build-directory/_site /usr/share/nginx/html 
+ # jekyll-website-build container and /build in the flag_status_viewer_builder container. 
+ # They are transferred to /usr/share/nginx/html and /usr/share/nginx/html/flag_status_viewer: 
+ COPY --from=jekyll-website-build  /build-directory/_site /usr/share/nginx/html
+ COPY --from:flag_status_viewer_builder /flag-status-viewer/build /usr/share/nginx/html/flag_status_viewer
   
 # Finally, the the main nginx.conf file is transferred to
 # /etc/nginx.conf.d/nginx.conf. The Sea Florida Change
