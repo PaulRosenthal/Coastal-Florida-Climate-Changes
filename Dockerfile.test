@@ -54,6 +54,9 @@
  COPY --from=flag_status_viewer_builder /flag-status-viewer/build /usr/share/nginx/html/flag-status-viewer
 
  # Testing:
+RUN echo "Contents of /usr/share/nginx/html:":
+RUN cd /usr/share/nginx/html/ && ls
+RUN echo "Contents of /usr/share/nginx/html/flag-status-viewer:"
 RUN cd /usr/share/nginx/html/flag-status-viewer && ls
   
 # Finally, the the main nginx.conf file is transferred to
