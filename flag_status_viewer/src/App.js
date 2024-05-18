@@ -1,6 +1,7 @@
-import logo from './logo.svg';
+import logo from './logo.png';
 import './App.css';
-import CurrentFlagStatus from './flag_status';
+import CurrentPanamaCityBeachFlagStatus from './panama_city_beach_flag_status';
+import CurrentSouthWaltonFlagStatus from './south_walton_flag_status';
 
 function App() {
 
@@ -8,14 +9,16 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <CurrentFlagStatus />
+        <CurrentPanamaCityBeachFlagStatus />
+        <br></br>
+        <CurrentSouthWaltonFlagStatus />
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://seaflchange.org"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Sea Florida Change
         </a>
       </header>
     </div>

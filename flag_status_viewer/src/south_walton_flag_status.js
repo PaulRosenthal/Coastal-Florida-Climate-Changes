@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-async function fetchFlagStatus() {
+async function FetchSouthWaltonFlagStatus() {
     try {
-      const response = await fetch('https://raw.githubusercontent.com/PaulRosenthal/Panama-City-Beach-Flags-Alexa-Skill/main/current-flag-status.txt');
+      const response = await fetch('https://raw.githubusercontent.com/PaulRosenthal/South-Walton-Beach-Flags-Alexa-Skill/main/current-flag-status.txt');
       const data = await response.text();
       return data;
     } catch (error) {
@@ -11,21 +11,22 @@ async function fetchFlagStatus() {
     }
   }
   
-  function CurrentFlagStatus() {
+  function CurrentSouthWaltonFlagStatus() {
     const [color, setColor] = useState('Fetching flag status...'); // Initial color
   
     useEffect(() => {
-      fetchFlagStatus()
+      FetchSouthWaltonFlagStatus()
         .then(data => setColor(data)); // Update color state with fetched data
     }, []);
   
     return (
       <div>
+        <h2>South Walton</h2>
         <p>
-          Color is: {color}
+          {color}
         </p>
       </div>
     );
   }
   
-  export default CurrentFlagStatus;
+  export default CurrentSouthWaltonFlagStatus;
