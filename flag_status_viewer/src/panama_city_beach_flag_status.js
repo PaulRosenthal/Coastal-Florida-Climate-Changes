@@ -12,11 +12,11 @@ async function FetchPanamaCityBeachFlagStatus() {
   }
 
   const colorImageMap = {
-    double_red: "https://test.seaflchange.org/img/flag_status_images/double_red_flags.png", 
-    red: "https://test.seaflchange.org/img/flag_status_images/red_flag.png", 
-    yellow: "https://test.seaflchange.org/img/flag_status_images/yellow_flag.png", 
-    green: "https://test.seaflchange.org/img/flag_status_images/green_flag.png",
-    purple: "https://test.seaflchange.org/img/flag_status_images/purple_flag.png"
+    double_red: "https://seaflchange.org/img/flag_status_images/double_red_flags.png", 
+    red: "https://seaflchange.org/img/flag_status_images/red_flag.png", 
+    yellow: "https://seaflchange.org/img/flag_status_images/yellow_flag.png", 
+    green: "https://seaflchange.org/img/flag_status_images/green_flag.png",
+    purple: "https://seaflchange.org/img/flag_status_images/purple_flag.png"
   };
   
   function getImageByColor(color) {
@@ -52,11 +52,11 @@ async function FetchPanamaCityBeachFlagStatus() {
   
     return (
       <div>
-        <h2>Panama City Beach</h2>
+        <h2>Panama City Beach, Florida</h2>
         {isLoading ? (
-          <img src="/flag_status_images/yellow_flag.png" alt="Loading Flag Image" />
+          <img src="/flag_status_images/yellow_flag.png" alt="Loading Flag" />
         ) : (
-          <img src={flag_image} className="App-logo" alt="logo" />
+          <img src={flag_image} alt="Flag" />
         )}
         <p>The current beach flag status is: {color}</p>
       </div>

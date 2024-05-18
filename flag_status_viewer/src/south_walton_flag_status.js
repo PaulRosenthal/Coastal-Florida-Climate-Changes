@@ -10,21 +10,55 @@ async function FetchSouthWaltonFlagStatus() {
       // Handle errors here (e.g., set a state variable for error message)
     }
   }
+
+  const colorImageMap = {
+    double_red: "https://seaflchange.org/img/flag_status_images/double_red_flags.png", 
+    red: "https://seaflchange.org/img/flag_status_images/red_flag.png", 
+    yellow: "https://seaflchange.org/img/flag_status_images/yellow_flag.png", 
+    green: "https://seaflchange.org/img/flag_status_images/green_flag.png",
+    purple: "https://seaflchange.org/img/flag_status_images/purple_flag.png"
+  };
+  
+  function getImageByColor(color) {
+    // Convert color to lowercase for case-insensitive matching
+    const lowercaseColor = color.toLowerCase();
+  
+    // Extract potential color keywords using regular expression
+    const colorMatch = lowercaseColor.match(/\b(red|yellow|purple|green)\b/);
+  
+    // Check if a color keyword was found
+    if (colorMatch) {
+      const matchedColor = colorMatch[1]; // Get the first captured color word
+      return colorImageMap[matchedColor] ? colorImageMap[matchedColor] : null;
+    } else {
+      // No color keyword found, return null
+      return null;
+    }
+  }
   
   function CurrentSouthWaltonFlagStatus() {
     const [color, setColor] = useState('Fetching flag status...'); // Initial color
+    const [flag_image, setFlagImage] = useState("yellow_flag.png"); // Initial flag image during loading period
+    const [isLoading, setIsLoading] = useState(true); // Initial loading state
   
     useEffect(() => {
       FetchSouthWaltonFlagStatus()
-        .then(data => setColor(data)); // Update color state with fetched data
+        .then(data => {
+          setColor(data);
+          setFlagImage(getImageByColor(data));
+          setIsLoading(false); // Set loading state to false after fetching data
+        });
     }, []);
   
     return (
       <div>
-        <h2>South Walton</h2>
-        <p>
-          {color}
-        </p>
+        <h2>South Walton County, Florida</h2>
+        {isLoading ? (
+          <img src="/flag_status_images/yellow_flag.png" alt="Loading Flag" />
+        ) : (
+          <img src={flag_image} alt="Flag" />
+        )}
+        <p>The current beach flag status is: {color}</p>
       </div>
     );
   }
