@@ -12,7 +12,7 @@ async function FetchPanamaCityBeachFlagStatus() {
   }
 
   const colorImageMap = {
-    double_red: "https://seaflchange.org/img/flag_status_images/double_red_flags.png", 
+    high: "https://seaflchange.org/img/flag_status_images/double_red_flags.png", 
     red: "https://seaflchange.org/img/flag_status_images/red_flag.png", 
     yellow: "https://seaflchange.org/img/flag_status_images/yellow_flag.png", 
     green: "https://seaflchange.org/img/flag_status_images/green_flag.png",
@@ -24,7 +24,7 @@ async function FetchPanamaCityBeachFlagStatus() {
     const lowercaseColor = color.toLowerCase();
   
     // Extract potential color keywords using regular expression
-    const colorMatch = lowercaseColor.match(/\b(red|yellow|purple|green)\b/);
+    const colorMatch = lowercaseColor.match(/\b(high|red|yellow|purple|green)\b/);
   
     // Check if a color keyword was found
     if (colorMatch) {
