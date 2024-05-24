@@ -38,7 +38,7 @@ async function FetchPanamaCityBeachFlagStatus() {
   
   function CurrentPanamaCityBeachFlagStatus() {
     const [color, setColor] = useState('Fetching flag status...'); // Initial color
-    const [flag_image, setFlagImage] = useState("yellow_flag.png"); // Initial flag image during loading period
+    const [flag_image, setFlagImage] = useState("https://test.seaflchange.org/img/loading.gif"); // Initial flag image during loading period
     const [isLoading, setIsLoading] = useState(true); // Initial loading state
   
     useEffect(() => {
@@ -54,11 +54,11 @@ async function FetchPanamaCityBeachFlagStatus() {
       <div>
         <h2>Panama City Beach, Florida</h2>
         {isLoading ? (
-          <img src="/flag_status_images/yellow_flag.png" alt="Loading Flag" />
+          <img src="https://test.seaflchange.org/img/flag_status_images/loading.gif" alt="Loading Flag" />
         ) : (
           <img src={flag_image} alt="Flag" />
         )}
-        <p>The current beach flag status is: {color}</p>
+        <p>{color}</p>
       </div>
     );
   }
