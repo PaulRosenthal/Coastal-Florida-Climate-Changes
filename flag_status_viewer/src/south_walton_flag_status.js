@@ -38,7 +38,7 @@ async function FetchSouthWaltonFlagStatus() {
   
   function CurrentSouthWaltonFlagStatus() {
     const [color, setColor] = useState('Fetching flag status...'); // Initial color
-    const [flag_image, setFlagImage] = useState("https://test.seaflchange.org/img/loading.gif"); // Initial flag image during loading period
+    const [flag_image, setFlagImage] = useState("https://seaflchange.org/img/loading.gif"); // Initial flag image during loading period
     const [isLoading, setIsLoading] = useState(true); // Initial loading state
   
     useEffect(() => {
@@ -54,7 +54,7 @@ async function FetchSouthWaltonFlagStatus() {
       <div>
         <h2>South Walton County, Florida</h2>
         {isLoading ? (
-          <img src="https://test.seaflchange.org/img/loading.gif" alt="Loading Flag" />
+          <img src="https://seaflchange.org/img/loading.gif" alt="Loading Flag" />
         ) : (
           <img src={flag_image} alt="Flag" />
         )}
