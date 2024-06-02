@@ -8,8 +8,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <h1>Emerald Coast Beach Flags</h1>
         <img src={logo} className="App-logo" alt="logo" />
+        <h1>Emerald Coast Beach Flags Status Viewer</h1>
         <CurrentPanamaCityBeachFlagStatus />
         <br></br>
         <CurrentSouthWaltonFlagStatus />

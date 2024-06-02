@@ -1,4 +1,4 @@
-RSpec.shared_examples_for 'Page' do
+RSpec.shared_examples_for 'Sea Florida Change Webpage' do
   it 'renders correctly' do
     expect(page.status_code).to be(200)
   end
@@ -8,6 +8,11 @@ RSpec.shared_examples_for 'Page' do
   it 'contains the date the website was last published' do
     expect(page).to have_text("This website was last published on")
   end
+end
+
+RSpec.shared_examples_for 'Flag Status Viewer Webpage' do
+  # There are no tests for the Flag Status Viewer application. They are tested within
+  # that application's "App.test.js" file.
 end
 
 RSpec.shared_examples_for 'Location Page' do
