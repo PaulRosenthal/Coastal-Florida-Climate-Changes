@@ -6,7 +6,16 @@ PAGES = Dir.glob(site).map{ |p| p.gsub(/[^_]+\/_site(.*)/, '\\1') }
 
 PAGES.each do |p|
   describe p do
-    it_behaves_like 'Page'
+    
+    page_extension = p.to_s
+    if page_extension.start_with?("/flag_status_viewer") == false
+    it_behaves_like 'Sea Florida Change Webpage'
+    end
+
+    page_extension = p.to_s
+    if page_extension.start_with?("/flag_status_viewer") == true
+    it_behaves_like 'Flag Status Viewer Webpage'
+    end
     
     page_extension = p.to_s
     if page_extension.start_with?("/communities") == true

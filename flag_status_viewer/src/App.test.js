@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('contains Emerald Coast Beach Flags Status Viewer', () => {
   render(<App />);
-  const linkElement = screen.getByText(/Emerald Coast Beach Flags/i);
+  const linkElement = screen.getByText(/Emerald Coast Beach Flags Status Viewer/i);
   expect(linkElement).toBeInTheDocument();
 });
