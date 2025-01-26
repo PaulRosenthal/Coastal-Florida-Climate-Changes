@@ -3,7 +3,8 @@
  
 # Use the latest Ruby Docker container and refer to it as "jekyll-website-build" 
 # downstream: 
-FROM ruby as jekyll-website-build 
+# Note: Version 3.3.6 has been temporarily pinned because of an issue with Jekyll and Ruby 3.4.
+FROM ruby:3.3.6 as jekyll-website-build 
  
 # Install Bundler for retrieving and loading dependencies downstream: 
 RUN gem install bundler 
