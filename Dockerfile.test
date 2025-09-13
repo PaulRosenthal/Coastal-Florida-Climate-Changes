@@ -1,4 +1,4 @@
-lol # Base Dockerfile components/structure 
+ # Base Dockerfile components/structure 
  # courtesy of https://www.deepanseeralan.com/tech/hosting-jekyll-site-in-gcp-cloud-run/. 
   
  # Use the latest Ruby Docker container and refer to it as "jekyll-website-build" 
