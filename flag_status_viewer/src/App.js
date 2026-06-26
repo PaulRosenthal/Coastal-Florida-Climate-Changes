@@ -29,24 +29,18 @@ function App() {
             your beach day.
           </p>
         
-          <a
-            href="https://apps.apple.com/us/app/emerald-coast-beach-flags/id6782753571"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: "inline-block",
-              marginTop: "10px",
-              padding: "12px 20px",
-              backgroundColor: "#1e293b",
-              color: "white",
-              border: "1px solid #4b5563",
-              borderRadius: "8px",
-              textDecoration: "none",
-              fontWeight: "bold"
-            }}
-          >
-            📱 Download NW Florida Beach Flags on the App Store
-          </a>
+                 <a
+          href="https://apps.apple.com/us/app/emerald-coast-beach-flags/id6782753571"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ display: "inline-block", marginTop: "12px" }}
+        >
+          <img
+            src={require("./assets/app-store-badge.svg")}
+            alt="Download on the App Store"
+            style={{ height: "48px" }}
+          />
+        </a>
         </div>
 
         <CurrentPanamaCityBeachFlagStatus />
