@@ -58,5 +58,5 @@ jobs:
           version: '>= 363.0.0'  
   
       - name: 'Execute Deploy to Test Environment'  
-        run: 'gcloud config set run/region us-central1 && gcloud run deploy sea-florida-change-website-test --image=index.docker.io/paulrosenthal/sea-florida-change-website:test --region=us-central1 --project=sea-florida-change && gcloud run services update-traffic sea-florida-change-website-test --to-latest' 
+        run: 'gcloud config set run/region us-central1 && gcloud run deploy sea-florida-change-website-test --image=us-central1-docker.pkg.dev/sea-florida-change/dockerhub-proxy/paulrosenthal/sea-florida-change-website:test --region=us-central1 --project=sea-florida-change && gcloud run services update-traffic sea-florida-change-website-test --to-latest' 
 
