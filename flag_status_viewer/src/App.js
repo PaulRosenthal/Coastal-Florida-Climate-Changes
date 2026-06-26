@@ -30,17 +30,20 @@ function App() {
           </p>
         
                  <a
-          href="https://apps.apple.com/us/app/emerald-coast-beach-flags/id6782753571"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ display: "inline-block", marginTop: "12px" }}
-        >
-          <img
-            src={require("./assets/app-store-badge.svg")}
-            alt="Download on the App Store"
-            style={{ height: "48px" }}
-          />
-        </a>
+  href="https://apps.apple.com/us/app/emerald-coast-beach-flags/id6782753571"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <img
+    src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+    alt="Download on the App Store"
+    style={{
+      height: "48px",
+      display: "block",
+      margin: "0 auto"
+    }}
+  />
+</a>
         </div>
 
         <CurrentPanamaCityBeachFlagStatus />
