@@ -24,9 +24,9 @@ function App() {
           <p>
             If you find this website helpful, please consider downloading my iPhone
             app, <strong>NW Florida Beach Flags</strong>, available on the App Store.
-            In addition to Panama City Beach and South Walton (30A) beach, the app
+            In addition to Panama City Beach (PCB) and South Walton (30A), the app
             also includes <strong>Destin beach flags</strong> and allows you to add
-            the flag status to your Home Screen.
+            the flag status for any of these locations to your Home Screen.
           </p>
         
                  <a
