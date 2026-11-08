@@ -1,11 +1,11 @@
-# Gemfile.lock File
-Gemfile.lock
-
 # Jekyll Build Files
 _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+
+# Vite Build Files
+/flag_status_viewer/dist/
 
 # MacOS File That Stores Folder Information
 *.DS_Store

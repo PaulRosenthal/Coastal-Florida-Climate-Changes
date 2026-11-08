@@ -36,7 +36,7 @@ WORKDIR /flag-status-viewer
 COPY /flag_status_viewer/package*.json ./
 
 # Install npm dependencies:
-RUN npm install
+RUN npm ci
 
 # Copy the remaining files:
 COPY ./flag_status_viewer .
@@ -52,7 +52,7 @@ FROM nginx
 # jekyll-website-build container and /build in the flag_status_viewer_builder container. 
 # They are transferred to /usr/share/nginx/html and /usr/share/nginx/html/flag_status_viewer: 
 COPY --from=jekyll-website-build  /build-directory/_site /usr/share/nginx/html
-COPY --from=flag_status_viewer_builder /flag-status-viewer/build /usr/share/nginx/html/flag-status-viewer
+COPY --from=flag_status_viewer_builder /flag-status-viewer/dist /usr/share/nginx/html/flag-status-viewer
 
 # Testing:
 RUN echo "Contents of /usr/share/nginx/html:":
