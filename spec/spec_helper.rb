@@ -13,7 +13,7 @@ class JekyllSite
 
   def initialize(root)
     @root = root
-    @server = Rack::File.new(root)
+    @server = Rack::Files.new(root)
   end
 
   def call(env)
